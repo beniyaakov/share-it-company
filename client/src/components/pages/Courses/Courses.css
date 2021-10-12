@@ -49,6 +49,7 @@ body {
     -moz-transform: scale(1.1);
     transform: scale(1.1);
     opacity: .6;
+    
   }
   .post-module .thumbnail {
     background: #000000;
@@ -89,6 +90,11 @@ body {
     -ms-transition: all 0.3s linear 0s;
     -o-transition: all 0.3s linear 0s;
     transition: all 0.3s linear 0s;
+    display: block;
+    width: 95%;
+    transition: all 0.3s linear 0s;
+    margin-left: 7px;
+    margin-top: -22px;
   }
   .post-module .post-content {
     position: absolute;
@@ -201,6 +207,12 @@ body {
   }
   .container .info span .fa {
     color: #e74c3c;
+  }
+
+  .btn{
+      display: flex;
+      justify-content: center;
+      
   }
 
   
