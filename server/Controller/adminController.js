@@ -2,6 +2,7 @@ const adminModel = require("../Model/adminModel");
 
 const getAllAdmin = (req, res) => {
   try {
+    
     adminModel.find({}, (error, result) => {
       if (error) throw error;
       res.status(200).json({ message: "success", data: result });
