@@ -1,15 +1,9 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button, Card } from 'antd';
-=======
-import React from 'react';
-import { Card } from 'antd';
 import {Link} from 'react-router-dom'
->>>>>>> 1ee27851fee813d5b3412f1ef3b70a8996d42f60
 import SliderNews from '../../features/Slider/SliderNews'
 import { userPageData } from './UsetPageData';
 import './userPageCard.css'
-import { Link } from 'react-router-dom';
 import { quizData } from './quizData';
 
 const { Meta } = Card;
@@ -57,7 +51,6 @@ const UserPage = () => {
 
             </div>
             </div>
-
     )
 }
 export default UserPage;

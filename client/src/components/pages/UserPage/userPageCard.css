@@ -19,18 +19,18 @@
 } */
 
 .cardMainStudent>.quizMain{
-    width: 30%;
     border: 2px solid rgb(177, 174, 174);
     box-shadow: 4px 5px 4px white;
     height: 250px;
     margin-top: 8%;
+    width: 30%;
 }
 .cardStudent{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     text-align: center;
-    width: 70%;
+    width: 60%;
 }
 @media only screen and (max-width: 750px) {
     .cardMainStudent {
