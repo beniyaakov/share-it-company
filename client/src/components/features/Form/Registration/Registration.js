@@ -1,48 +1,38 @@
-import React, { useState } from 'react';
-import 'antd/dist/antd.css';
-import './Registration.css';
-import {
-  Form,
-  Input,
-  InputNumber,
-  Cascader,
-  Select,
-  Row,
-  Col,
-  Checkbox,
-  Button,
-  AutoComplete,
-} from 'antd';
+import React, { useState } from "react";
+import "antd/dist/antd.css";
+import "./Registration.css";
+import { Form, Input, Select, Checkbox, Button } from "antd";
+import { register } from "../../../../Service/User-Service";
 
 const { Option } = Select;
 const residences = [
   {
-    value: 'zhejiang',
-    label: 'Zhejiang',
+    value: "zhejiang",
+    label: "Zhejiang",
     children: [
       {
-        value: 'hangzhou',
-        label: 'Hangzhou',
+        value: "hangzhou",
+        label: "Hangzhou",
         children: [
           {
-            value: 'xihu',
-            label: 'West Lake',
+            value: "xihu",
+            label: "West Lake",
           },
         ],
       },
     ],
   },
   {
-    value: 'jiangsu',
-    label: 'Jiangsu',
+    value: "jiangsu",
+    label: "Jiangsu",
     children: [
       {
-        value: 'nanjing',
-        label: 'Nanjing',
+        value: "nanjing",
+        label: "Nanjing",
         children: [
           {
-            value: 'zhonghuamen',
-            label: 'Zhong Hua Men',
+            value: "zhonghuamen",
+            label: "Zhong Hua Men",
           },
         ],
       },
@@ -81,10 +71,50 @@ const tailFormItemLayout = {
 };
 
 const Registration = () => {
+  const [adminEmail, setAdminEmail] = useState([]);
+  const [adminPassword, setAdminPassword] = useState([]);
+  const [firstName, setFirstName] = useState([]);
+  const [lastName, setLastName] = useState([]);
+
+  const saveInfoEmail = (e) => {
+    setAdminEmail(e.target.value);
+    console.log(adminEmail);
+  };
+
+  const saveInfoPassword = (e) => {
+    setAdminPassword(e.target.value);
+    console.log(adminPassword);
+  };
+
+  const saveInfofirstName = (e) => {
+    setFirstName(e.target.value);
+    console.log(firstName);
+  };
+
+  const saveInfolastName = (e) => {
+    setLastName(e.target.value);
+    console.log(lastName);
+  };
+
+  const adminData = {
+    email: adminEmail,
+    Password: adminPassword,
+    firstName: firstName,
+    lastName: lastName,
+  };
+
+  const sendData = () => {
+    register(adminData)
+    .then(() => {
+      window.location.pathname="/login"
+      alert('נרשמת בהצלחה !')
+    });
+  };
+
   const [form] = Form.useForm();
 
   const onFinish = (values) => {
-    console.log('Received values of form: ', values);
+    console.log("Received values of form: ", values);
   };
 
   const prefixSelector = (
@@ -117,7 +147,9 @@ const Registration = () => {
     if (!value) {
       setAutoCompleteResult([]);
     } else {
-      setAutoCompleteResult(['.com', '.org', '.net'].map((domain) => `${value}${domain}`));
+      setAutoCompleteResult(
+        [".com", ".org", ".net"].map((domain) => `${value}${domain}`)
+      );
     }
   };
 
@@ -127,19 +159,17 @@ const Registration = () => {
   }));
   return (
     <Form
-    className="Registration-form "
+      className="Registration-form "
       {...formItemLayout}
       form={form}
       name="register"
       onFinish={onFinish}
       initialValues={{
-        residence: ['zhejiang', 'hangzhou', 'xihu'],
-        prefix: '86',
+        residence: ["zhejiang", "hangzhou", "xihu"],
+        prefix: "86",
       }}
       scrollToFirstError
     >
-     
-
       <Form.Item
         name="שם פרטי"
         label="שם פרטי"
@@ -147,12 +177,12 @@ const Registration = () => {
         rules={[
           {
             required: true,
-            message: ' שדה חובה ',
+            message: " שדה חובה ",
             whitespace: true,
           },
         ]}
       >
-        <Input />
+        <Input onChange={saveInfofirstName} value={firstName} />
       </Form.Item>
 
       <Form.Item
@@ -162,12 +192,12 @@ const Registration = () => {
         rules={[
           {
             required: true,
-            message: 'שדה חובה',
+            message: "שדה חובה",
             whitespace: true,
           },
         ]}
       >
-        <Input />
+        <Input onChange={saveInfolastName} value={lastName} />
       </Form.Item>
 
       <Form.Item
@@ -175,58 +205,57 @@ const Registration = () => {
         label="אימייל"
         rules={[
           {
-            type: 'email',
-            message: 'המייל לא חוקי',
+            type: "email",
+            message: "המייל לא חוקי",
           },
           {
             required: true,
-            message: 'אנא הוסיף מייל',
+            message: "אנא הוסיף מייל",
           },
         ]}
       >
-        <Input />
+        <Input onChange={saveInfoEmail} value={adminEmail} />
       </Form.Item>
 
-
       <Form.Item
-        name="סיסמא:"
-        label="סיסמא:"
+        name="password"
+        label="סיסמא"
         rules={[
           {
             required: true,
-            message: 'שדה חובה',
+            message: "Please input your password!",
           },
         ]}
         hasFeedback
       >
-        <Input.Password />
+        <Input.Password onChange={saveInfoPassword} value={adminPassword} />
       </Form.Item>
 
       <Form.Item
-        name="אימות סיסמא"
+        name="confirm"
         label="אימות סיסמא"
-        dependencies={['password']}
+        dependencies={["password"]}
         hasFeedback
         rules={[
           {
             required: true,
-            message: 'אנא אמת את הסיסמא',
+            message: "Please confirm your password!",
           },
           ({ getFieldValue }) => ({
             validator(_, value) {
-              if (!value || getFieldValue('password') === value) {
+              if (!value || getFieldValue("password") === value) {
                 return Promise.resolve();
               }
 
-              return Promise.reject(new Error('הסיסמאות לא תואמות'));
+              return Promise.reject(
+                new Error("The two passwords that you entered do not match!")
+              );
             },
           }),
         ]}
       >
         <Input.Password />
       </Form.Item>
-     
-      
 
       <Form.Item
         name="תנאים"
@@ -234,17 +263,19 @@ const Registration = () => {
         rules={[
           {
             validator: (_, value) =>
-              value ? Promise.resolve() : Promise.reject(new Error('תסכים לתנאים')),
+              value
+                ? Promise.resolve()
+                : Promise.reject(new Error("תסכים לתנאים")),
           },
         ]}
         {...tailFormItemLayout}
       >
         <Checkbox>
-          קראתי את  <a href="">התקנון</a>
+          קראתי את <a href="">התקנון</a>
         </Checkbox>
       </Form.Item>
       <Form.Item {...tailFormItemLayout}>
-        <Button type="primary" htmlType="submit">
+        <Button type="primary" htmlType="submit" onClick={sendData}>
           הירשם
         </Button>
       </Form.Item>
@@ -252,5 +283,4 @@ const Registration = () => {
   );
 };
 
-
-export default Registration
+export default Registration;

@@ -1,3 +1,4 @@
+
 const adminModel = require('../Model/adminModel')
 const Usermodel = require('../Model/userModel')
 const bcrypt = require('bcrypt')
@@ -65,6 +66,6 @@ const registerAdmin = async (req, res) => {
 
 }
 module.exports = {
-    registerUser,
-    registerAdmin
-}
+  registerUser,
+  registerAdmin,
+};
