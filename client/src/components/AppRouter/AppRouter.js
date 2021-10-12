@@ -1,6 +1,10 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom';
+import Courses from '../pages/Courses/Courses';
 import Home from '../pages/Home/Home';
+import Instructors from '../pages/Instructors/Instructors';
+import Students from '../pages/Students/Students';
+import StudyContent from '../pages/StudyContent/StudyContent';
 
 
 const AppRouter = () => {
@@ -8,6 +12,11 @@ const AppRouter = () => {
         <div>
             <Switch>
                 <Route exact path="/" component={Home} />
+                <Route exact path="/StudyContent" component={StudyContent} />
+                <Route exact path="/Courses" component={Courses} />
+                <Route exact path="/Instructors" component={Instructors} />
+                <Route exact path="/Students" component={Students} />
+
             </Switch>
         </div>
     )
