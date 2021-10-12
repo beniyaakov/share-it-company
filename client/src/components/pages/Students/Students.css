@@ -1,23 +1,204 @@
-.modal{
-    display: flex;
-    flex-direction: column;
+.modal {
+  display: flex;
+  flex-direction: column;
 }
 
-.modal input{
-    width: 150px;
-    margin-top: 10px;
-    margin-left: 321px;
+.modal input {
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 321px;
 }
 
-.modal textarea{
-    margin-top: 20px;
-    height: 200px;
+.modal textarea {
+  margin-top: 20px;
+  height: 200px;
 }
 
-.coursesBtn{
-    display: flex;
+.coursesBtn {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.studentCards-wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4rem;
+  padding: 4rem;
+  margin: 0 auto;
+  width: max-content;
+}
+
+.studentCard {
+  font-family: 'Heebo';
+  --bg-filter-opacity: 0.5;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, var(--bg-filter-opacity)),
+      rgba(0, 0, 0, var(--bg-filter-opacity))
+    ),
+    var(--bg-img);
+  height: 20em;
+  width: 15em;
+  font-size: 1.5em;
+  color: white;
+  border-radius: 1em;
+  padding: 1em;
+  /*margin: 2em;*/
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 5em -1em black;
+  transition: all, var(--transition-time);
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #ccc;
+  text-decoration: none;
+}
+
+.studentCard:hover {
+  transform: rotate(0);
+}
+
+.studentCard h1 {
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+
+.studentCard p {
+  font-size: 0.75em;
+  font-family: 'Open Sans';
+  margin-top: 0.5em;
+  line-height: 2em;
+}
+
+.studentCard .tags {
+  display: flex;
+}
+
+.studentCard .tags .tag {
+  font-size: 0.75em;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 0.3rem;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  line-height: 1.5em;
+  transition: all, var(--transition-time);
+}
+
+.studentCard:hover .tags .tag {
+  background: var(--color);
+  color: white;
+}
+
+.studentCard .date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.75em;
+  padding: 1em;
+  line-height: 1em;
+  opacity: 0.8;
+}
+
+.studentCard:before,
+.studentCard:after {
+  content: '';
+  transform: scale(0);
+  transform-origin: top left;
+  border-radius: 50%;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  z-index: -5;
+  transition: all, var(--transition-time);
+  transition-timing-function: ease-in-out;
+}
+
+.studentCard:before {
+  background: #ddd;
+  width: 250%;
+  height: 250%;
+}
+
+.studentCard:after {
+  background: white;
+  width: 200%;
+  height: 200%;
+}
+
+.studentCard:hover {
+  color: var(--color);
+}
+
+.studentCard:hover:before,
+.studentCard:hover:after {
+  transform: scale(1);
+}
+
+.studentCard-grid-space .num {
+  font-size: 3em;
+  margin-bottom: 1.2rem;
+  margin-left: 1rem;
+}
+
+.info {
+  font-size: 1.2em;
+  display: flex;
+  padding: 1em 3em;
+  height: 3em;
+}
+
+.info img {
+  height: 3em;
+  margin-right: 0.5em;
+}
+
+.info h1 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1285px) {
+  .studentCards-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .studentCards-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .info {
     justify-content: center;
-    justify-content: space-evenly;
-    width: 500px;
-    margin: 0 auto;
+  }
+  .studentCard-grid-space .num {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .studentCards-wrapper {
+    padding: 4rem 2rem;
+  }
+  .studentCard {
+    max-width: calc(100vw - 4rem);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .info {
+    display: block;
+    text-align: center;
+  }
+  .info h1 {
+    margin: 0;
+  }
 }

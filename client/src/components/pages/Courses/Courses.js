@@ -78,7 +78,7 @@ function Courses() {
       return (<div class="column">
       <div class="post-module hover">
         <div class="thumbnail">
-          <img src={course.img}/>
+          <img className="imgCourse" src={course.img}/>
         </div>
         <div class="post-content">
           <h1 class="title">{course.name}</h1>

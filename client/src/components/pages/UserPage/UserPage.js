@@ -51,7 +51,6 @@ const UserPage = () => {
 
             </div>
             </div>
-
     )
 }
 export default UserPage;
