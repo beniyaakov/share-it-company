@@ -1,0 +1,13 @@
+.footerMain {
+width: 100%;
+background: rgb(246,246,246);
+height: 150px;
+font-size: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;}
+
+.footerMain a{
+    color: black;
+}

@@ -1,4 +1,4 @@
-const API="http://localhost:5000";
+const API="http://localhost:8080";
 
 export const getCourses = async (req, res) => {
     try {
