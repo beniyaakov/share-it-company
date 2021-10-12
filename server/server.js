@@ -19,8 +19,8 @@ const adminRoute = require('./Route/adminRoute');
 const loginRoute = require('./Route/loginRoute');
 const educationalMaterialRoute = require('./Route/educationalMaterialRoute');
 
-app.use('/api/post',postRoute)
 app.use('/api/user',userRoute)
+app.use('/api/post',postRoute)
 app.use('/api/register', registerRoute);
 app.use('/api/userAuth', loginRoute);
 app.use('/api/educationalMaterialRoute', educationalMaterialRoute);
