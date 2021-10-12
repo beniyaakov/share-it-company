@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card } from 'antd';
+import {Link} from 'react-router-dom'
 import SliderNews from '../../features/Slider/SliderNews'
 import { userPageData } from './UsetPageData';
 import './userPageCard.css'
@@ -12,7 +13,8 @@ const UserPage =()=> {
             <SliderNews />
             <div  className="cardMainStudent">
                 {userPageData.map((item) => {
-                    return <Card key={item.id}
+                    return <Link to={item.link}>
+                    <Card key={item.id}
                         hoverable
                         style={{ width: 320, margin: 10, boxShadow: 2 }}
                         cover={<img alt="example" src={item.img} style={{ width: 300, height: 180, marginLeft: 10 }} />
@@ -20,6 +22,7 @@ const UserPage =()=> {
                     >
                         <Meta title={item.title} description={item.description} />
                     </Card>
+                    </Link>
                 })}
             </div>
             </div>
