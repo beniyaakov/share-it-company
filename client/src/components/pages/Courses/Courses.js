@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'antd';
+import './Courses.css';
 
 
 const courses = [
@@ -30,9 +31,14 @@ function Courses() {
        <Button type="primary" onClick={showModal}>
         הכנס מידע
       </Button>
-      <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+      <Modal title="באפשרותך לשתף מידע על קורסים" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} okText="הוסף" cancelText="צא">
+        <div className="modal">
         <input placeholder="שם הקורס"/>
         <input placeholder="קישור לקורס"/>
+        <textarea placeholder="מידע"/>
+        </div>
+        
+
         
       </Modal>
             
