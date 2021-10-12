@@ -14,11 +14,14 @@ DB.on('eroor',()=>{
 })
 
 const registerRoute = require('./Route/registerRoute')
-
+const userRoute = require('./Route/userRoute')
+const postRoute = require('./Route/postRoute')
 // app.use('/',(req,res)=>{
 // res.send('bomboklat')
 // })
 app.use('/api/register',registerRoute)
+app.use('/api/user',userRoute)
+app.use('/api/post',postRoute)
 
 app.listen(PORT, () =>{
   console.log(`Server is running on port ${PORT}`);  
