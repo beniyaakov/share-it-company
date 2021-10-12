@@ -8,10 +8,11 @@ import { UserOutlined, LockOutlined } from "@ant-design/icons";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
+  
   const { isLogin, login } = useContext(AuthContext);
 
   if (isLogin) {
-    return <Redirect to="/" />;
+    return <Redirect to="userPage" />;
   }
 
   const saveInfoEmail = (e) => {

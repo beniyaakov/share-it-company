@@ -1,7 +1,6 @@
 import React from 'react'
 import { Card } from 'antd';
 import {Link} from 'react-router-dom'
-
 const { Meta } = Card;
 
 const CardComponent = (props) =>{
@@ -16,6 +15,5 @@ const CardComponent = (props) =>{
         <Meta title={title} description={description} />
       </Card>
       </Link>   )
-    
 }
 export default CardComponent;
