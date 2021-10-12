@@ -26,10 +26,8 @@ app.use('/api/userAuth', loginRoute);
 app.use('/api/educationalMaterialRoute', educationalMaterialRoute);
 app.use("/api/admin", adminRoute);
 
-// app.use('/',(req,res)=>{
-  // res.send('bomboklat')
-  // })
 
+  
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
