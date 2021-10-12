@@ -1,7 +1,7 @@
 const API = "http://localhost:8080";
 
 
-export const register = async (data) => {
+export const adminRegister = async (data) => {
     const options = {
       method: "POST",
       body: JSON.stringify(data),
