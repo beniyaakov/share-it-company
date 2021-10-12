@@ -1,3 +1,5 @@
+const API="http://localhost:8080";
+
 export const getInstructor = async (req, res) => {
     try {
       return await fetch(`${API}/Instructor`);
@@ -6,8 +8,6 @@ export const getInstructor = async (req, res) => {
       res.status(500).json({ message: "Server Error" });
     }
   };
-
-  const API="http://localhost:5000";
 export const postInstructor = async (title,subTitle,description,img) => {
     const options = {
       method: "POST",

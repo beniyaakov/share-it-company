@@ -1,0 +1,23 @@
+.modal{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal input{
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 321px;
+}
+
+.modal textarea{
+    margin-top: 20px;
+    height: 200px;
+}
+
+.coursesBtn{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    width: 500px;
+    margin: 0 auto;
+}
