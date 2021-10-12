@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'antd';
+import './Instructors.css';
+
 
 
 const InstructorsArray = [
@@ -30,10 +32,14 @@ function Instructors() {
        <Button type="primary" onClick={showModal}>
         הכנס מידע
       </Button>
-      <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+      <Modal title="באפשרותך לשתף מידע על מדריכים" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} okText="הוסף" cancelText="צא">
+        <div className="modal">
         <input placeholder="נושא"/>
-        <input placeholder="מידע"/>
         <input placeholder="קישור למדריך"/>
+        <textarea placeholder="מידע"/>
+        </div>
+        
+
       </Modal>
             
             
