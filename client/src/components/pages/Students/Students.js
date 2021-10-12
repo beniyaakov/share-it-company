@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'antd';
+import './Students.css'
 
 
 const studyContentData = [
@@ -30,12 +31,16 @@ function Students() {
        <Button type="primary" onClick={showModal}>
         הכנס מידע
       </Button>
-      <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+      <Modal title=" באפשורתך לשתף מידע אודות עצמך" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} okText="הוסף" cancelText="צא">
+        <div  className="modal">
         <input placeholder="שם הסטודנט"/>
         <input placeholder="קורס"/>
         <input placeholder="מקום עבודה"/>
-        <input placeholder="תיאור"/>
         <input placeholder="תמונה"/>
+        <textarea placeholder="תיאור"/>
+       
+        </div>
+    
       </Modal>
             
             

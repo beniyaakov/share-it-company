@@ -1,3 +1,5 @@
+const API="http://localhost:8080";
+
 export const getStudyContent = async (req, res) => {
     try {
       return await fetch(`${API}/studyContent`);
@@ -7,7 +9,6 @@ export const getStudyContent = async (req, res) => {
     }
   };
 
-  const API="http://localhost:5000";
 export const postStudyContent = async (title,subTitle,description,img) => {
     const options = {
       method: "POST",

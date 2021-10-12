@@ -6,7 +6,7 @@ import './userPageCard.css'
 
 const { Meta } = Card;
 
-function UserPage() {
+const UserPage =()=> {
     return (
         <div>
             <SliderNews />
@@ -22,10 +22,7 @@ function UserPage() {
                     </Card>
                 })}
             </div>
+            </div>
 
-
-        </div>
-    )
-}
-
-export default UserPage
+)}
+export default UserPage;
