@@ -1,8 +1,11 @@
 .navBarMain{
+    width: 100%;
+    background: rgb(246,246,246);
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -2px;
+   
 }
 .navBarMain img{
-    margin-left: 20%;
+  
 }
