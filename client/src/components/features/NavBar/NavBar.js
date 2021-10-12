@@ -4,12 +4,10 @@ import './NavBar.css'
 import Button from '../Button/Button'
 import Profile from '../Profile/Profile'
 import { AuthContext } from "../../Context/AuthContextProvider";
-
+import {Redirect} from "react-router-dom"
 
 const NavBar = () => {
     const { isLogin } = useContext(AuthContext);
-
-
     
     return (
        
