@@ -1,7 +1,6 @@
 import React,{context} from 'react'
 import { useState, useEffect, createContext } from "react";
-
-const API = "http://localhost:5000";
+const API = "http://localhost:8080";
 
 export const AuthContext = createContext({
   isLogin: false,
@@ -21,17 +20,15 @@ const AuthContextProvider = ({ children }) => {
       headers: { "Content-Type": "application/json" },
     };
     try {
-      return await fetch(`${API}/admin/login`, options)
+      return await fetch(`${API}/api/userAuth/login`, options)
         .then((res) => {
           console.log(res);
-
           return res.json();
         })
         .then((data) => {
           console.log(data);
           localStorage.setItem("token", data.token);
           localStorage.setItem("useremail", data.email);
-
           setIsLogin(true);
         });
     } catch (error) {

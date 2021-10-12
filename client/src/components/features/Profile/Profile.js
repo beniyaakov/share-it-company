@@ -7,11 +7,17 @@ import { Avatar } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import { Menu, Dropdown } from "antd";
 import { DownOutlined } from "@ant-design/icons";
+import { Redirect } from "react-router-dom";
 
 const Profile = () => {
   const { logout } = useContext(AuthContext);
   const [state, setState] = useState([]);
 
+  const logoutAdmin = () => {
+    logout();
+    return <Redirect to="/login" />;
+  };
+  
   const handleMenuClick = (e) => {
     if (e.key === "3") {
       setState({ visible: false });
@@ -34,7 +40,7 @@ const Profile = () => {
       <div className="profile">
         <Avatar size={35} icon={<UserOutlined />} />
         <p>hello:</p>
-        <ExportOutlined onClick={logout} />
+        <ExportOutlined onClick={logoutAdmin} />
 
         
           <Dropdown
