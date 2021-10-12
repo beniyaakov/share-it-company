@@ -1,22 +1,37 @@
-#img-slider{
-    width: 50%;
-    height: 450px;
-    margin-left: 15%;
-    border:1px solid rgb(150, 148, 148) ;
-    box-shadow: 2px 2px 2px white;
+#img-slider {
+  width: 70%;
+  height: 450px;
+  margin-left: 14%;
+  border:10px solid white;
+  box-shadow: 2px 2px 2px white;
+}
+.carouselMain {
+  width: 100%;
+  height: fit-content;
+  /* display: flex; */
+  /* justify-content: center; */
+}
+.headerSlider {
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+}
+.descSlider {
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .slider-container {
+    width: 360px;
   }
-    
-    @media screen and (max-width: 600px) {
-      .slider-container {
-        width: 360px;
-      }
-      .container-frame-cube {
-        margin-left: 30%;
-      }
-    }
-    @media screen and (max-width: 600px) {
-    .material-card.mc-activet{
+  .container-frame-cube {
+    margin-left: 30%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .material-card.mc-activet {
     background-color: blueviolet;
-    }
-     
-    }
+  }
+}
