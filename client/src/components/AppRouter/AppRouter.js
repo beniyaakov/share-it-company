@@ -11,6 +11,8 @@ import StudyContent from "../pages/StudyContent/StudyContent";
 import Login from "../features/Form/Login/Login";
 import logout from "../Context/AuthContextProvider";
 import UserPage from "../pages/UserPage/UserPage";
+import Registration from "../features/Form/Registration/Registration";
+
 
 const AppRouter = () => {
   const { userClearLocalStorage } = useContext(AuthContext);
@@ -31,7 +33,8 @@ const AppRouter = () => {
         <Route path="/UserPage" component={UserPage} />
         <Route path="/icon" component={Profile} />
         <Route path="/login" component={Login} />
-        <Route path="logout" component={logout} />
+        <Route path="/logout" component={logout} />
+        <Route path="/Registration" component={Registration} />
       </Switch>
     </div>
   );
