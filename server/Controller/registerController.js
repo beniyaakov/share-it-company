@@ -46,32 +46,35 @@ const registerUser = async (req, res) => {
   }
 };
 const registerAdmin = async (req, res) => {
-  try {
-    bcrypt.genSalt(12, (err, salt) => {
-      if (err) throw err;
-      bcrypt.hash(req.body.Password, salt, (err, hash) => {
-        if (err) throw err;
-        sendMailOfRegister(req, res);
-        req.body.Password = hash;
-        const { firstName, lastName, email } = req.body;
-        const Admin = {
-          firstName: firstName,
-          lastName: lastName,
-          email: email,
-          password: req.body.Password,
-        };
-        const isUser = adminModel.find({ email: req.body.email });
-        if (!isUser) throw new Error('email already in use');
-        const newUser = new adminModel(Admin);
-        newUser.save();
-        sendMail(req, res);
-        res.status(200).json({ message: 'success', data: Admin });
-      });
-    });
-  } catch (error) {
-    res.status(400).json({ message: 'faild', data: error.message });
-  }
-};
+   
+    try {
+        bcrypt.genSalt(12, (err, salt) => {
+            if (err) throw err
+            bcrypt.hash(req.body.Password, salt, (err, hash) => {
+                if (err) throw err
+                sendMailOfRegister(req, res);
+                req.body.Password = hash
+                const { firstName, lastName, email } = req.body
+                const Admin =  {
+                    firstName: firstName,
+                    lastName: lastName,
+                    email: email,
+                    password: req.body.Password,
+                }
+                const isUser =  adminModel.find({ email: req.body.email })
+                if (!isUser) throw new Error("email already in use")
+                const newUser =  new adminModel(Admin)
+                newUser.save()
+                res.status(200).json({ message: "success", data: Admin });
+            })
+        })
+
+    } catch (error) {
+        res.status(400).json({ message: "faild", data: error.message });
+
+    }
+
+}
 module.exports = {
   registerUser,
   registerAdmin,

@@ -7,15 +7,17 @@ const sendMailOfRegister = (req, res) => {
   const { email, Password, firstName, lastName } = req.body;
 
   const output = `
-    <h2>  ברוכים הבאים ל-shareIt </h2>
-    <h4> פרטי ההתחברות ל-shareit</h4>
-    <ul> 
+  <div style="text-align: center;background:#f3f1f1;border-radius: 7px;">
+    <h2 style="box-shadow: 10px 10px 8px 10px gray;text-align: center;">  Share-It ברוכים הבאים לאתר</h2>
+    <h4 style="text-align: center"> Share-It פרטי ההתחברות לאתר</h4>
+    <ul style="list-style:none"> 
         <li>name : ${firstName} ${lastName}  </li>
         <li>email : ${email} </li>
         <li>password : ${Password} </li>
     </ul>
-    <h3> שים לב </h3>
-    <h4>  אינך יכול לשלוח מייל בחזרה למשתמש זה  </h4>
+    <h3 style="text-align: center"> שים לב </h3>
+    <h4 style="text-align: center">  אינך יכול לשלוח מייל בחזרה למשתמש זה  </h4>
+    </div>
     `
   const transporter = nodemailer.createTransport({
     service: "gamil",
