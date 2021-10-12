@@ -8,6 +8,7 @@ import Instructors from '../pages/Instructors/Instructors';
 import Students from '../pages/Students/Students';
 import StudyContent from '../pages/StudyContent/StudyContent';
 import Login from "../features/Form/Login/Login"
+import Favorites from '../pages/Favorites/Favorites';
 
 const AppRouter = () => {
     const { userClearLocalStorage } = useContext(AuthContext);
@@ -26,6 +27,8 @@ const AppRouter = () => {
                 <Route exact path="/Students" component={Students} />
                 <Route path="/icon" component={Profile} />
                 <Route path="/login" component={Login} />
+                <Route path="/login" component={Favorites} />
+
 
             </Switch>
         </div>
