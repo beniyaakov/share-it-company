@@ -1,0 +1,107 @@
+const nodemailer = require("nodemailer");
+const { EMAIL_ADDRESS, EMAIL_PASS } = process.env;
+const adminModel = require('../Model/adminModel')
+const userModel = require('../Model/userModel')
+
+const sendMailOfRegister = (req, res) => {
+  const { email, Password, firstName, lastName } = req.body;
+
+  const output = `
+    <h2>  ברוכים הבאים ל-shareIt </h2>
+    <h4> פרטי ההתחברות ל-shareit</h4>
+    <ul> 
+        <li>name : ${firstName} ${lastName}  </li>
+        <li>email : ${email} </li>
+        <li>password : ${Password} </li>
+    </ul>
+    <h3> שים לב </h3>
+    <h4>  אינך יכול לשלוח מייל בחזרה למשתמש זה  </h4>
+    `
+  const transporter = nodemailer.createTransport({
+    service: "gamil",
+    host: "smtp.gmail.com",
+    port: 465,
+    auth: {
+      user: EMAIL_ADDRESS,
+      pass: EMAIL_PASS,
+    },
+    secureConnection: false,
+    tls: {
+      rejectUnauthorized: false,
+    },
+  });
+
+  const information = {
+    from:`Share-It ${EMAIL_ADDRESS}`,
+    to: email,
+    subject: "register to share-it weeb!",
+    text: "welcome to share-it",
+    html: output,
+  };
+
+  try {
+    transporter.sendMail(information, (error, infro)=>{
+        if(error) throw error;
+        console.log(`message send :%s ${infro.messageId}`);
+        console.log(`preview url :%s ${nodemailer.getTestMessageUrl(infro)}`);
+        res.send('success');
+    })      
+  } catch (error) {
+      res.send('filed' + error.message)
+      console.log(error.message);
+  }
+};
+
+const sendMailOfNewPost = async () => {
+    const output = `
+      <h2>פוסט חדש פורסם באתר Share-It </h2>
+      `
+    const transporter = nodemailer.createTransport({
+      service: "gamil",
+      host: "smtp.gmail.com",
+      port: 465,
+      auth: {
+        user: EMAIL_ADDRESS,
+        pass: EMAIL_PASS,
+      },
+      secureConnection: false,
+      tls: {
+        rejectUnauthorized: false,
+      },
+    });
+  
+    let emails = []
+    const userEmails = await userModel.find({})
+    userEmails.map((user)=>{
+        return emails.push(user.email)
+    })
+    const adminEmails = await adminModel.find({})
+    adminEmails.map((admin)=>{
+        return emails.push(admin.email)
+    })
+    // console.log(emails);
+    const information = {
+      from:`Share-It ${EMAIL_ADDRESS}`,
+      to: emails,
+      subject: "new post posted in share-it weeb!",
+      text: "new post",
+      html: output,
+    };
+  
+    try {
+      transporter.sendMail(information, (error, infro)=>{
+          if(error) throw error;
+          console.log(`message send :%s ${infro.messageId}`);
+          console.log(`preview url :%s ${nodemailer.getTestMessageUrl(infro)}`);
+          res.send('success');
+      })      
+    } catch (error) {
+        res.send('filed' + error.message)
+        console.log(error.message);
+    }
+  };
+
+module.exports = {
+  sendMailOfRegister,
+  sendMailOfNewPost,
+};

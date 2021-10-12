@@ -14,7 +14,7 @@ const Profile = () => {
   const [state, setState] = useState([]);
 
   const logoutAdmin = () => {
-    logout();
+    logout()
     return <Redirect to="/login" />;
   };
   
