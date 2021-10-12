@@ -4,11 +4,14 @@ require('dotenv').config()
 const cors = require('cors')
 const app = express()
 const PORT = process.env.PORT||5000
+const DB = require('./DB/index')
 
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
+DB.on('eroor',()=>{
+  console.log('connected');
+})
 
 app.use('/',(req,res)=>{
 res.send('bomboklat')
