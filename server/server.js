@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: false }));
 
 
 app.use('/',(req,res)=>{
-res.send('bomboklat')
+res.send('hello world')
 })
 
 
