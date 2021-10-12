@@ -1,4 +1,5 @@
 const EducationalMaterialModel = require('../Model/educationalMaterialModel');
+const {sendMailOfNewPost} = require('../Utils/sendMail');
 
 const getAllMaterials = async (req, res) => {
   try {
@@ -12,6 +13,7 @@ const getAllMaterials = async (req, res) => {
 
 const postMaterial = async (req, res) => {
   try {
+    sendMailOfNewPost();
     let material = new EducationalMaterialModel(req.body);
     await material.save();
     res.send(material);
