@@ -1,9 +1,8 @@
-import React from 'react';
 import React, { useState } from 'react';
 import { Modal, Button } from 'antd';
 
 
-const Instructors = [
+const InstructorsArray = [
     {title:"dsfd",subTitle:"dfd",description:"dfdf",img:""},
     {title:"dfd",subTitle:"dfd",description:"dfdfd",img:""},
     {title:"dfd",subTitle:"dff",description:"dfdf",img:""},
