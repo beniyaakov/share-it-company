@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 import { Modal, Button } from 'antd';
 
 
-const Instructors = [
+const studyContentData = [
     {title:"dsfd",subTitle:"dfd",description:"dfdf",img:""},
     {title:"dfd",subTitle:"dfd",description:"dfdfd",img:""},
     {title:"dfd",subTitle:"dff",description:"dfdf",img:""},
     {title:"dfdf",subTitle:"dfdf",description:"dfdff",img:""},
 ]
 
-function Instructors() {
+function Students() {
     const [isModalVisible, setIsModalVisible] = useState(false);
 
     const showModal = () => {
@@ -32,9 +32,11 @@ function Instructors() {
         הכנס מידע
       </Button>
       <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-        <input placeholder="נושא"/>
-        <input placeholder="מידע"/>
-        <input placeholder="קישור למדריך"/>
+        <input placeholder="שם הסטודנט"/>
+        <input placeholder="קורס"/>
+        <input placeholder="מקום עבודה"/>
+        <input placeholder="תיאור"/>
+        <input placeholder="תמונה"/>
       </Modal>
             
             
@@ -42,4 +44,4 @@ function Instructors() {
     )
 }
 
-export default Instructors;
+export default Students;
