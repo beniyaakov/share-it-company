@@ -2,12 +2,54 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  width:68%;
   text-align: center;
   padding: 1px;
   margin-top: 20px;
+ 
 }
 .cardMain div{
     margin: 5px;
-  
+}
+.cardMainUser{
+    background: rgb(246,246,246);
+}
+
+/* .cardMainStudent >.userCard{
+    width: 30%;
+} */
+
+.cardMainStudent>.quizMain{
+    width: 30%;
+    border: 2px solid rgb(177, 174, 174);
+    box-shadow: 4px 5px 4px white;
+    height: 250px;
+    margin-top: 8%;
+}
+.cardStudent{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 70%;
+}
+@media only screen and (max-width: 750px) {
+    .cardMainStudent {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 1px;
+        margin-top: 20px;
+       
+      }
+      .cardMainStudent>.quizMain{
+        width: 70%;
+        height: 280px !important;
+        border: 2px solid rgb(177, 174, 174);
+        box-shadow: 4px 5px 4px white;
+        height: 250px;
+        margin-top: 8%;
+    }
+
 }
