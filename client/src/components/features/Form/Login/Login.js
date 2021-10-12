@@ -12,7 +12,7 @@ const Login = () => {
   const { isLogin, login } = useContext(AuthContext);
 
   if (isLogin) {
-    return <Redirect to="/" />;
+    return <Redirect to="userPage" />;
   }
 
   const saveInfoEmail = (e) => {
