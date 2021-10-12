@@ -13,10 +13,12 @@ DB.on('eroor',()=>{
   console.log('connected');
 })
 
-app.use('/',(req,res)=>{
-res.send('bomboklat')
-})
+const registerRoute = require('./Route/registerRoute')
 
+// app.use('/',(req,res)=>{
+// res.send('bomboklat')
+// })
+app.use('/api/register',registerRoute)
 
 app.listen(PORT, () =>{
   console.log(`Server is running on port ${PORT}`);  

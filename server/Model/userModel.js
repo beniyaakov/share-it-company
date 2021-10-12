@@ -27,11 +27,8 @@ const userSchema = new Schema({
         type:[
 
         ]
-    },
-    likes:{
-        type:Number,
-        default:0
     }
 })
 
 const userModel = mongoose.model('Users',userSchema)
+module.exports = userModel
