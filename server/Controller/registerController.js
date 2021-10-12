@@ -31,7 +31,7 @@ const registerUser = async (req, res) => {
 
 }
 const registerAdmin = async (req, res) => {
-   
+
     try {
         bcrypt.genSalt(12, (err, salt) => {
             if (err) throw err
@@ -39,15 +39,15 @@ const registerAdmin = async (req, res) => {
                 if (err) throw err
                 req.body.Password = hash
                 const { firstName, lastName, email } = req.body
-                const Admin =  {
+                const Admin = {
                     firstName: firstName,
                     lastName: lastName,
                     email: email,
                     password: req.body.Password,
                 }
-                const isUser =  adminModel.find({ email: req.body.email })
+                const isUser = adminModel.find({ email: req.body.email })
                 if (!isUser) throw new Error("email already in use")
-                const newUser =  new adminModel(Admin)
+                const newUser = new adminModel(Admin)
                 newUser.save()
                 res.status(200).json({ message: "success", data: Admin });
             })

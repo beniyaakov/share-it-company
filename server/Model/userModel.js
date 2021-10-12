@@ -34,6 +34,9 @@ const userSchema = new Schema({
                 userName: {
                     type: String,
                 },
+                title: {
+                    type: String,
+                },
                 content: {
                     type: String,
                 },
