@@ -1,0 +1,13 @@
+.cardMainStudent {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width:68%;
+  text-align: center;
+  padding: 1px;
+  margin-top: 20px;
+}
+.cardMain div{
+    margin: 5px;
+  
+}

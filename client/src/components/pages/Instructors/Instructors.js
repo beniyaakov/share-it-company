@@ -1,9 +1,10 @@
-import React from 'react';
 import React, { useState } from 'react';
 import { Modal, Button } from 'antd';
+import './Instructors.css';
 
 
-const Instructors = [
+
+const InstructorsArray = [
     {title:"dsfd",subTitle:"dfd",description:"dfdf",img:""},
     {title:"dfd",subTitle:"dfd",description:"dfdfd",img:""},
     {title:"dfd",subTitle:"dff",description:"dfdf",img:""},
@@ -31,10 +32,14 @@ function Instructors() {
        <Button type="primary" onClick={showModal}>
         הכנס מידע
       </Button>
-      <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+      <Modal title="באפשרותך לשתף מידע על מדריכים" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} okText="הוסף" cancelText="צא">
+        <div className="modal">
         <input placeholder="נושא"/>
-        <input placeholder="מידע"/>
         <input placeholder="קישור למדריך"/>
+        <textarea placeholder="מידע"/>
+        </div>
+        
+
       </Modal>
             
             
