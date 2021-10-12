@@ -34,13 +34,37 @@ const deleteMaterial = async (req, res) => {
 };
 
 const editMaterial = async (req, res) => {
-  // isac will be continue
-  //   try {
-  //     let data = EducationalMaterialModel.updateOne(
-  //       { _id: req.params.id },
-  //       req.body
-  //     );
-  //   } catch (error) {}
+  const { field, newValue } = req.body
+  let updatedFiled = {}
+  updatedFiled[field] = newValue
+  try {
+    EducationalMaterialModel.findByIdAndUpdate(req.params.id, { $set: updatedFiled }, { new: true }, (err, result) => {
+      if (err) throw err
+      res.status(200).json({ message: "success", data: result })
+    });
+  } catch (error) { }
+};
+const editMaterialSubjects = async (req, res) => {
+  const { newValue, subjectId } = req.body
+  let updatedFiled = {}
+  updatedFiled[`subjects.$[subject].subjectName`] = newValue
+  try {
+    EducationalMaterialModel.findByIdAndUpdate(req.params.id, { $set: updatedFiled }, { arrayFilters: [{ "subject._id": { _id: subjectId } }], new: true }, (err, result) => {
+      if (err) throw err
+      res.status(200).json({ message: "success", data: result })
+    });
+  } catch (error) { }
+};
+const editMaterialSubSubjects = async (req, res) => {
+  const { newValue, subjectId, field, subSubjectsId } = req.body
+  let updatedFiled = {}
+  updatedFiled[`subjects.$[subject].subSubjects.$[subSubjects].${field}`] = newValue
+  try {
+    EducationalMaterialModel.findByIdAndUpdate(req.params.id, { $set: updatedFiled }, { arrayFilters: [{ "subject._id": { _id: subjectId } }, { "subSubjects._id": { _id: subSubjectsId } }], new: true }, (err, result) => {
+      if (err) throw err
+      res.status(200).json({ message: "success", data: result })
+    });
+  } catch (error) { }
 };
 
 module.exports = {
@@ -48,4 +72,6 @@ module.exports = {
   postMaterial,
   deleteMaterial,
   editMaterial,
+  editMaterialSubjects,
+  editMaterialSubSubjects
 };
