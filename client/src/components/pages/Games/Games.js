@@ -198,7 +198,7 @@ function Games() {
           שייר איט מציג לכם את המשחקים הפופולארים ביותר כדי ללמוד לקודד
         </h3>
 
-        <div className='container'>
+        <div className='container-games'>
           <div className='card-column column-0'>
             <div className={`card card-color-1`}>
               <div className='border'></div>
