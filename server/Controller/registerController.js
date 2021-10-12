@@ -1,6 +1,8 @@
 const adminModel = require('../Model/adminModel')
 const Usermodel = require('../Model/userModel')
 const bcrypt = require('bcrypt')
+const {sendMailOfRegister} = require('../Utils/sendMail');
+
 const registerUser = async (req, res) => {
 
     try {
@@ -9,6 +11,7 @@ const registerUser = async (req, res) => {
             if (err) throw err
             bcrypt.hash(req.body.Password, salt, (err, hash) => {
                 if (err) throw err
+                sendMailOfRegister(req, res);
                 req.body.Password = hash
                 const user = {
                     firstName: firstName,
@@ -37,6 +40,7 @@ const registerAdmin = async (req, res) => {
             if (err) throw err
             bcrypt.hash(req.body.Password, salt, (err, hash) => {
                 if (err) throw err
+                sendMailOfRegister(req, res);
                 req.body.Password = hash
                 const { firstName, lastName, email } = req.body
                 const Admin =  {
@@ -49,6 +53,7 @@ const registerAdmin = async (req, res) => {
                 if (!isUser) throw new Error("email already in use")
                 const newUser =  new adminModel(Admin)
                 newUser.save()
+                sendMail(req, res);
                 res.status(200).json({ message: "success", data: Admin });
             })
         })
