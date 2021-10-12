@@ -19,7 +19,7 @@ const students = [
     { name: "itzhak kasie", course: "devnet", workAt: "wix", img: "https://media-exp1.licdn.com/dms/image/C4E35AQEf5zT6-kTYpQ/profile-framedphoto-shrink_800_800/0/1614614634753?e=1634112000&v=beta&t=bOR5ulW8yU8y6EJ69BbVdBWG43201MiryLJ0T6T0peQ" },
   ];
 
-function filter() {
+function Filter() {
 
     const [filteredStudents,SetFilteredStudents] = useState([]);
 
@@ -68,12 +68,15 @@ function filter() {
       <button onClick={devnetStudents}>devnet</button>
 
       {filteredStudents.map((student)=>{
-          <>
-          <h1>{student.name}</h1>
-          <h2>{student.course}</h2>
-          <h3>{student.workAt}</h3>
-          <img src={student.img}/>
-          </>
+          return(
+            <>
+            <h1>{student.name}</h1>
+            <h2>{student.course}</h2>
+            <h3>{student.workAt}</h3>
+            <img src={student.img}/>
+            </>
+          )
+         
 
       })}
 
@@ -81,4 +84,4 @@ function filter() {
   </div>;
 }
 
-export default filter;
+export default Filter;
