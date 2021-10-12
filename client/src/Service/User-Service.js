@@ -31,3 +31,4 @@ export const register = async (data) => {
     console.log(error);
   }
 };
+

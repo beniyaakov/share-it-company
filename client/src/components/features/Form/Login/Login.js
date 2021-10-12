@@ -1,6 +1,6 @@
 import "./Login.css";
 import React, { useState, useContext } from "react";
-import { Redirect } from "react-router-dom";
+import { Link,Redirect } from "react-router-dom";
 import { AuthContext } from "../../../Context/AuthContextProvider";
 import { Form, Input, Button, Checkbox } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
@@ -92,9 +92,11 @@ const Login = () => {
             className="login-form-button"
             onClick={() => login(userInfo)}
           >
-            התחבר{" "}
+            התחבר
           </Button>
-          או <a href="">הירשם</a>
+          או  
+           
+           <Link to="/Registration">הירשם</Link>
         </Form.Item>
       </Form>
     </div>
