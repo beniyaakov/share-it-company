@@ -3,6 +3,7 @@ import "antd/dist/antd.css";
 import "./Registration.css";
 import { Form, Input, Select, Checkbox, Button } from "antd";
 import { register } from "../../../../Service/User-Service";
+import { message } from "antd";
 
 const { Option } = Select;
 const residences = [
@@ -103,11 +104,15 @@ const Registration = () => {
     lastName: lastName,
   };
 
+  const success = () => {
+    message.success("נרשמת בהצלחה");
+  };
+
   const sendData = () => {
-    register(adminData)
-    .then(() => {
-      window.location.pathname="/login"
-      alert('נרשמת בהצלחה !')
+    register(adminData).then((data) => {
+      console.log(data);
+      // window.location.pathname="/login"
+      success();
     });
   };
 
