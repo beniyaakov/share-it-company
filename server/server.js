@@ -15,9 +15,11 @@ DB.on('eroor', () => {
 const adminRoute = require('./Route/adminRoute');
 const registerRoute = require('./Route/registerRoute');
 const loginRoute = require('./Route/loginRoute');
+const educationalMaterialRoute = require('./Route/educationalMaterialRoute');
 
 app.use('/api/register', registerRoute);
 app.use('/api/userAuth', loginRoute);
+app.use('/api/educationalMaterialRoute', educationalMaterialRoute);
 app.use("/api/admin", adminRoute);
 
 // app.use('/',(req,res)=>{
