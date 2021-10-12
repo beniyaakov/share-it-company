@@ -7,6 +7,7 @@ import Home from '../pages/Home/Home';
 import Instructors from '../pages/Instructors/Instructors';
 import Students from '../pages/Students/Students';
 import StudyContent from '../pages/StudyContent/StudyContent';
+import UserPage from '../pages/UserPage/UserPage';
 
 
 const AppRouter = () => {
@@ -15,7 +16,6 @@ const AppRouter = () => {
     if (userClearLocalStorage) {
       return <Redirect to='/logout' />;
     }
-    
     return (
         <div>
             <Switch>
@@ -24,8 +24,8 @@ const AppRouter = () => {
                 <Route exact path="/Courses" component={Courses} />
                 <Route exact path="/Instructors" component={Instructors} />
                 <Route exact path="/Students" component={Students} />
+                <Route exact path="/UserPage" component={UserPage} />
                 <Route path="/icon" component={Profile} />
-
             </Switch>
         </div>
     )
