@@ -14,12 +14,14 @@ DB.on('eroor', () => {
 
 const registerRoute = require('./Route/registerRoute');
 const loginRoute = require('./Route/loginRoute');
+const educationalMaterialRoute = require('./Route/educationalMaterialRoute');
 
 // app.use('/',(req,res)=>{
 // res.send('bomboklat')
 // })
 app.use('/api/register', registerRoute);
 app.use('/api/userAuth', loginRoute);
+app.use('/api/educationalMaterialRoute', educationalMaterialRoute);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
