@@ -12,15 +12,18 @@ DB.on('eroor', () => {
   console.log('connected');
 });
 
+const adminRoute = require('./Route/adminRoute');
 const registerRoute = require('./Route/registerRoute');
 const loginRoute = require('./Route/loginRoute');
 
-// app.use('/',(req,res)=>{
-// res.send('bomboklat')
-// })
 app.use('/api/register', registerRoute);
 app.use('/api/userAuth', loginRoute);
+app.use("/api/admin", adminRoute);
 
+// app.use('/',(req,res)=>{
+  // res.send('bomboklat')
+  // })
+  
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
