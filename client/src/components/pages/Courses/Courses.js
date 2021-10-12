@@ -33,7 +33,7 @@ function Courses() {
       </Button>
      </div>
        
-<div class="container">
+<div class="courses-container">
 
       <Modal title="באפשרותך לשתף מידע על קורסים" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} okText="הוסף" cancelText="צא">
         <div className="modal">
