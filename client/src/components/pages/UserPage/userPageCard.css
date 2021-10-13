@@ -12,16 +12,32 @@
   background-color: #87b4bb;
  
 }
-.cardMain div{
-    margin: 5px;
+.cardMain div {
+  margin: 5px;
 }
-.cardMainUser{
-    background: rgb(246,246,246);
+.cardMainUser {
+  background: rgb(246, 246, 246);
 }
 
 /* .cardMainStudent >.userCard{
     width: 30%;
 } */
+
+.cardMainStudent > .quizMain {
+  width: 30%;
+  box-shadow: 1px 1px 45px lightblue;
+  border-radius: 10px;
+  background-color: rgb(241, 248, 255);
+  height: fit-content;
+  margin-top: 8%;
+  padding: 30px 10px;
+}
+.cardStudent {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 70%;}
 
 .cardMainStudent>.quizMain{
     border: 2px solid rgb(177, 174, 174);
@@ -30,9 +46,11 @@
     margin-top: 8%;
     width: 30%;
 }
-.cardStudent{
+@media only screen and (max-width: 750px) {
+  .cardMainStudent {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
     width: 60%;
@@ -71,4 +89,13 @@ div .ant-card-meta .descriptionUser{
         margin-top: 8%;
     }
 
+  }
+  .cardMainStudent > .quizMain {
+    width: 70%;
+    height: 280px !important;
+    border: 2px solid rgb(177, 174, 174);
+    box-shadow: 4px 5px 4px white;
+    height: 250px;
+    margin-top: 8%;
+  }
 }

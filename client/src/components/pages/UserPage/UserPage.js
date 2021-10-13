@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { Button, Card } from 'antd';
-import {Link} from 'react-router-dom'
-import SliderNews from '../../features/Slider/SliderNews'
+import { Link } from 'react-router-dom';
+import SliderNews from '../../features/Slider/SliderNews';
 import { userPageData } from './UsetPageData';
-import './userPageCard.css'
+import './userPageCard.css';
+import './UserPage.css';
 import { quizData } from './quizData';
 
 const { Meta } = Card;
 
 const UserPage = () => {
+
     const [quizAnswer, setQuizAnswer] = useState("");
     const [counter, setCounter] = useState(0)
     return (
@@ -47,10 +49,13 @@ const UserPage = () => {
 
                     </div>
 
+
                 </div>
 
-            </div>
-            </div>
-    )
-}
+          
+          </div>
+        </div>
+  );
+};
+
 export default UserPage;
