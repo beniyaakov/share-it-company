@@ -1,0 +1,57 @@
+.coursesBtn{
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    justify-content: space-evenly;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.student-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #87b4bb;
+    height: 750px;
+}
+
+.student-container .studentDetails{
+flex: 3;
+display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.student-container .studentImage{
+    margin-top: 5px;
+    display: flex;
+    flex: 1 1;
+    justify-content: center;
+    align-items: center;
+
+}
+.student-container img{
+    width: 500px;
+    height: 500px;
+    margin-top: 5px;
+    margin-right: 50px;
+    border: solid 3px #f07575;
+}
+
+.student-container .studentDetails h1{
+    color: white;
+    direction: rtl;
+
+}
+.student-container .studentDetails h3{
+    color: white;
+    direction: rtl;
+}
+.student-container .studentDetails h2{
+    color: white;
+    padding: 55px;
+    direction: rtl;
+}
+
+
+

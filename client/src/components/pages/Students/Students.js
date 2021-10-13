@@ -4,41 +4,142 @@ import './Students.css';
 
 const students = [
   {
-    name: 'elias admaso',
-    course: 'fullStack',
+    name: 'Daniel Admaso',
+    course: 'FullStack',
     workAt: 'wix',
-    img: 'https://media-exp1.licdn.com/dms/image/C4E03AQHONZLBcUQWlA/profile-displayphoto-shrink_800_800/0/1615321610967?e=1639612800&v=beta&t=UmIZs12v6ENEl5jTTWGFmdmIx848YsFlF1nSXJNUDkk',
+    img:"https://media-exp1.licdn.com/dms/image/C4D03AQG02Fmgno0AKg/profile-displayphoto-shrink_800_800/0/1611145430193?e=1639612800&v=beta&t=dCJHJgBRd_KbSpBLvhvJmNph1P0RbEFxqR56-WIpCTM",
+    desciption:`
+    מה הביא אותך לטק-קריירה?
+    
+    מאז ומתמיד תחום המחשבים ענין אותי. בתיכון הייתי במגמות ביולוגיה ומחשבים, אז משם הבסיס שלי הגיע. במהלך שירותי הצבאי הייתה לי שיחה עם קרוב משפחה שלמד באותה תקופה בטק-קריירה, זה נשמע לי גדול ומעניין ומתאים לקריירה אליה כיוונתי, וכשיצאתי לאזרחות הגשתי מועמדות.
+    
+    
+    
+    מה אתה עושה היום ואיפה אתה רואה את עצמך בהמשך הקריירה?
+    
+    הקורס שעשיתי היה בשיתוף פעולה עם מכללת John Bryce. במסגרת שיתוף הפעולה שלהם עם טק-קריירה הוצע לי להשתתף בפיילוט שיכשיר בוגר מצטיין מתוך הקורס כמרצה בית בקורסים אחרים של John Bryce. עשיתי את התפקיד הזה במשך שנתיים וגיליתי שאני אוהב מאוד את תחום הדרכה.
+    
+    אחרי שנתיים החלטתי לשלב את ההדרכה עם עבודה בהייטק כדי לצבור את הידע הטכני והניסיון. עשיתי תפקידי QA בסטרטאפים, בחברות Matrix ו- Retalix, 888 וקומו ובהמשך עשיתי תפקידים משולבים של QA ואוטומציה. במהלך הקריירה שלי התקדמתי לתפקידים ניהוליים: בקומו הייתי ראש צוות ובתפקידי האחרון כשכיר ב- BringBring, מנהל תחום QA.
+    `
+    
+    
+    
   },
   {
-    name: 'beni yaakov',
+    name: 'Oozy Bitew',
+    course: 'FullStack',
+    workAt: 'wix',
+    img:"https://media-exp1.licdn.com/dms/image/C4D03AQGLxDQoORdUew/profile-displayphoto-shrink_800_800/0/1610991230227?e=1639612800&v=beta&t=r-fqN5LDi8WHfhm8bubT21KZHLeZYqGKsBXhtnpYWCU",
+    desciption:`
+    מה הביא אותך לטק-קריירה?
+    
+    מאז ומתמיד תחום המחשבים ענין אותי. בתיכון הייתי במגמות ביולוגיה ומחשבים, אז משם הבסיס שלי הגיע. במהלך שירותי הצבאי הייתה לי שיחה עם קרוב משפחה שלמד באותה תקופה בטק-קריירה, זה נשמע לי גדול ומעניין ומתאים לקריירה אליה כיוונתי, וכשיצאתי לאזרחות הגשתי מועמדות.
+    
+    
+    
+    מה אתה עושה היום ואיפה אתה רואה את עצמך בהמשך הקריירה?
+    
+    הקורס שעשיתי היה בשיתוף פעולה עם מכללת John Bryce. במסגרת שיתוף הפעולה שלהם עם טק-קריירה הוצע לי להשתתף בפיילוט שיכשיר בוגר מצטיין מתוך הקורס כמרצה בית בקורסים אחרים של John Bryce. עשיתי את התפקיד הזה במשך שנתיים וגיליתי שאני אוהב מאוד את תחום הדרכה.
+    
+    אחרי שנתיים החלטתי לשלב את ההדרכה עם עבודה בהייטק כדי לצבור את הידע הטכני והניסיון. עשיתי תפקידי QA בסטרטאפים, בחברות Matrix ו- Retalix, 888 וקומו ובהמשך עשיתי תפקידים משולבים של QA ואוטומציה. במהלך הקריירה שלי התקדמתי לתפקידים ניהוליים: בקומו הייתי ראש צוות ובתפקידי האחרון כשכיר ב- BringBring, מנהל תחום QA.
+    `
+  },
+  {
+    name: 'Yizhak Gete',
+    course: 'FullStack',
+    workAt: 'wix',
+    img:"https://media-exp1.licdn.com/dms/image/C4D03AQGS-oistPXAUQ/profile-displayphoto-shrink_800_800/0/1615235694737?e=1639612800&v=beta&t=k9hoLAKBq5-U8TwpFZf-fZI7mJhbYVox66Emx-JAhkI",
+    desciption:`
+    מה הביא אותך לטק-קריירה?
+    
+    מאז ומתמיד תחום המחשבים ענין אותי. בתיכון הייתי במגמות ביולוגיה ומחשבים, אז משם הבסיס שלי הגיע. במהלך שירותי הצבאי הייתה לי שיחה עם קרוב משפחה שלמד באותה תקופה בטק-קריירה, זה נשמע לי גדול ומעניין ומתאים לקריירה אליה כיוונתי, וכשיצאתי לאזרחות הגשתי מועמדות.
+    
+    
+    
+    מה אתה עושה היום ואיפה אתה רואה את עצמך בהמשך הקריירה?
+    
+    הקורס שעשיתי היה בשיתוף פעולה עם מכללת John Bryce. במסגרת שיתוף הפעולה שלהם עם טק-קריירה הוצע לי להשתתף בפיילוט שיכשיר בוגר מצטיין מתוך הקורס כמרצה בית בקורסים אחרים של John Bryce. עשיתי את התפקיד הזה במשך שנתיים וגיליתי שאני אוהב מאוד את תחום הדרכה.
+    
+    אחרי שנתיים החלטתי לשלב את ההדרכה עם עבודה בהייטק כדי לצבור את הידע הטכני והניסיון. עשיתי תפקידי QA בסטרטאפים, בחברות Matrix ו- Retalix, 888 וקומו ובהמשך עשיתי תפקידים משולבים של QA ואוטומציה. במהלך הקריירה שלי התקדמתי לתפקידים ניהוליים: בקומו הייתי ראש צוות ובתפקידי האחרון כשכיר ב- BringBring, מנהל תחום QA.
+    `
+  },
+  {
+    name: 'Yaffa Belete',
+    course: 'Automation',
+    workAt: 'IBM',
+    img:"https://media-exp1.licdn.com/dms/image/C4D03AQExGoCTqwYwrw/profile-displayphoto-shrink_800_800/0/1608139449126?e=1639612800&v=beta&t=1-9M55PvZkRGCXuV9iPMMYM5ekXS4LTAjMRCizitVC8",
+    desciption:`
+    מה הביא אותך לטק-קריירה?
+    
+    מאז ומתמיד תחום המחשבים ענין אותי. בתיכון הייתי במגמות ביולוגיה ומחשבים, אז משם הבסיס שלי הגיע. במהלך שירותי הצבאי הייתה לי שיחה עם קרוב משפחה שלמד באותה תקופה בטק-קריירה, זה נשמע לי גדול ומעניין ומתאים לקריירה אליה כיוונתי, וכשיצאתי לאזרחות הגשתי מועמדות.
+    
+    
+    
+    מה אתה עושה היום ואיפה אתה רואה את עצמך בהמשך הקריירה?
+    
+    הקורס שעשיתי היה בשיתוף פעולה עם מכללת John Bryce. במסגרת שיתוף הפעולה שלהם עם טק-קריירה הוצע לי להשתתף בפיילוט שיכשיר בוגר מצטיין מתוך הקורס כמרצה בית בקורסים אחרים של John Bryce. עשיתי את התפקיד הזה במשך שנתיים וגיליתי שאני אוהב מאוד את תחום הדרכה.
+    
+    אחרי שנתיים החלטתי לשלב את ההדרכה עם עבודה בהייטק כדי לצבור את הידע הטכני והניסיון. עשיתי תפקידי QA בסטרטאפים, בחברות Matrix ו- Retalix, 888 וקומו ובהמשך עשיתי תפקידים משולבים של QA ואוטומציה. במהלך הקריירה שלי התקדמתי לתפקידים ניהוליים: בקומו הייתי ראש צוות ובתפקידי האחרון כשכיר ב- BringBring, מנהל תחום QA.
+    `
+  },
+  {
+    name: 'Galit Mahari',
     course: 'QA',
-    workAt: 'wix',
-    img: 'https://media-exp1.licdn.com/dms/image/C4E03AQFU2v3qRvbdYw/profile-displayphoto-shrink_800_800/0/1617628713358?e=1639612800&v=beta&t=zETemBvRww3Ow68scr-OcnUTu7pC0ejfzsuC0GypmWg',
+    workAt: 'Sparks',
+    img:"https://media-exp1.licdn.com/dms/image/C4D03AQG_8mK3_QRXqg/profile-displayphoto-shrink_800_800/0/1538580466055?e=1639612800&v=beta&t=XuFvWQg-m3ZRYZBytZ1vCOpSAD68_k1JZXm-TCzMJdo",
+    desciption:`
+    מה הביא אותך לטק-קריירה?
+    
+    מאז ומתמיד תחום המחשבים ענין אותי. בתיכון הייתי במגמות ביולוגיה ומחשבים, אז משם הבסיס שלי הגיע. במהלך שירותי הצבאי הייתה לי שיחה עם קרוב משפחה שלמד באותה תקופה בטק-קריירה, זה נשמע לי גדול ומעניין ומתאים לקריירה אליה כיוונתי, וכשיצאתי לאזרחות הגשתי מועמדות.
+    
+    
+    
+    מה אתה עושה היום ואיפה אתה רואה את עצמך בהמשך הקריירה?
+    
+    הקורס שעשיתי היה בשיתוף פעולה עם מכללת John Bryce. במסגרת שיתוף הפעולה שלהם עם טק-קריירה הוצע לי להשתתף בפיילוט שיכשיר בוגר מצטיין מתוך הקורס כמרצה בית בקורסים אחרים של John Bryce. עשיתי את התפקיד הזה במשך שנתיים וגיליתי שאני אוהב מאוד את תחום הדרכה.
+    
+    אחרי שנתיים החלטתי לשלב את ההדרכה עם עבודה בהייטק כדי לצבור את הידע הטכני והניסיון. עשיתי תפקידי QA בסטרטאפים, בחברות Matrix ו- Retalix, 888 וקומו ובהמשך עשיתי תפקידים משולבים של QA ואוטומציה. במהלך הקריירה שלי התקדמתי לתפקידים ניהוליים: בקומו הייתי ראש צוות ובתפקידי האחרון כשכיר ב- BringBring, מנהל תחום QA.
+    `
   },
   {
-    name: 'yehuda bayana',
-    course: 'fullStack',
-    workAt: 'wix',
-    img: 'https://media-exp1.licdn.com/dms/image/D4D35AQE-GnBktmSAPA/profile-framedphoto-shrink_400_400/0/1629479100451?e=1634112000&v=beta&t=yglHnlRy67IWgrvcCbs1pbt9QESIqRhTfOAHUKFwJnU',
+    name: 'Yakov Nagosa',
+    course: 'FullStack',
+    workAt: 'IronSource',
+    img:"https://media-exp1.licdn.com/dms/image/C5603AQHw_KJ9hq7ezg/profile-displayphoto-shrink_800_800/0/1516448311350?e=1639612800&v=beta&t=blDtr4iIFexW1Fq_mfyYPKY39S6zr2u82uV6ZbbK9wI",
+    desciption:`
+    מה הביא אותך לטק-קריירה?
+    
+    מאז ומתמיד תחום המחשבים ענין אותי. בתיכון הייתי במגמות ביולוגיה ומחשבים, אז משם הבסיס שלי הגיע. במהלך שירותי הצבאי הייתה לי שיחה עם קרוב משפחה שלמד באותה תקופה בטק-קריירה, זה נשמע לי גדול ומעניין ומתאים לקריירה אליה כיוונתי, וכשיצאתי לאזרחות הגשתי מועמדות.
+    
+    
+    
+    מה אתה עושה היום ואיפה אתה רואה את עצמך בהמשך הקריירה?
+    
+    הקורס שעשיתי היה בשיתוף פעולה עם מכללת John Bryce. במסגרת שיתוף הפעולה שלהם עם טק-קריירה הוצע לי להשתתף בפיילוט שיכשיר בוגר מצטיין מתוך הקורס כמרצה בית בקורסים אחרים של John Bryce. עשיתי את התפקיד הזה במשך שנתיים וגיליתי שאני אוהב מאוד את תחום הדרכה.
+    
+    אחרי שנתיים החלטתי לשלב את ההדרכה עם עבודה בהייטק כדי לצבור את הידע הטכני והניסיון. עשיתי תפקידי QA בסטרטאפים, בחברות Matrix ו- Retalix, 888 וקומו ובהמשך עשיתי תפקידים משולבים של QA ואוטומציה. במהלך הקריירה שלי התקדמתי לתפקידים ניהוליים: בקומו הייתי ראש צוות ובתפקידי האחרון כשכיר ב- BringBring, מנהל תחום QA.
+    `
   },
   {
-    name: 'yosef sahalo',
-    course: 'salesforce',
-    workAt: 'wix',
-    img: 'https://media-exp1.licdn.com/dms/image/C4D03AQGrwFn-Q1OuQQ/profile-displayphoto-shrink_800_800/0/1633559772093?e=1639612800&v=beta&t=iDXCU68q_hfow8vqvqmhTQochQO68tEWYU8zT61FXDU',
+    name: 'Kineret Asiyahan',
+    course: 'Devnet',
+    workAt: 'CheckPoint',
+    img:"https://media-exp1.licdn.com/dms/image/C4D03AQFxrn7UqoytHQ/profile-displayphoto-shrink_800_800/0/1618231708265?e=1639612800&v=beta&t=LrCe5M434z6QW8JWtgHNOi_j9QikFJ2Z0onXM0DnHKc",
+    desciption:`
+    מה הביא אותך לטק-קריירה?
+    
+    מאז ומתמיד תחום המחשבים ענין אותי. בתיכון הייתי במגמות ביולוגיה ומחשבים, אז משם הבסיס שלי הגיע. במהלך שירותי הצבאי הייתה לי שיחה עם קרוב משפחה שלמד באותה תקופה בטק-קריירה, זה נשמע לי גדול ומעניין ומתאים לקריירה אליה כיוונתי, וכשיצאתי לאזרחות הגשתי מועמדות.
+    
+    
+    
+    מה אתה עושה היום ואיפה אתה רואה את עצמך בהמשך הקריירה?
+    
+    הקורס שעשיתי היה בשיתוף פעולה עם מכללת John Bryce. במסגרת שיתוף הפעולה שלהם עם טק-קריירה הוצע לי להשתתף בפיילוט שיכשיר בוגר מצטיין מתוך הקורס כמרצה בית בקורסים אחרים של John Bryce. עשיתי את התפקיד הזה במשך שנתיים וגיליתי שאני אוהב מאוד את תחום הדרכה.
+    
+    אחרי שנתיים החלטתי לשלב את ההדרכה עם עבודה בהייטק כדי לצבור את הידע הטכני והניסיון. עשיתי תפקידי QA בסטרטאפים, בחברות Matrix ו- Retalix, 888 וקומו ובהמשך עשיתי תפקידים משולבים של QA ואוטומציה. במהלך הקריירה שלי התקדמתי לתפקידים ניהוליים: בקומו הייתי ראש צוות ובתפקידי האחרון כשכיר ב- BringBring, מנהל תחום QA.
+    `
   },
-  {
-    name: 'kineret asiyahan',
-    course: 'SOC',
-    workAt: 'wix',
-    img: 'https://media-exp1.licdn.com/dms/image/C4D03AQFxrn7UqoytHQ/profile-displayphoto-shrink_800_800/0/1618231708265?e=1639612800&v=beta&t=LrCe5M434z6QW8JWtgHNOi_j9QikFJ2Z0onXM0DnHKc',
-  },
-  {
-    name: 'itzhak kasie',
-    course: 'devnet',
-    workAt: 'wix',
-    img: 'https://media-exp1.licdn.com/dms/image/C4E35AQEf5zT6-kTYpQ/profile-framedphoto-shrink_800_800/0/1614614634753?e=1634112000&v=beta&t=bOR5ulW8yU8y6EJ69BbVdBWG43201MiryLJ0T6T0peQ',
-  },
+
 ];
 
 function Students() {
@@ -47,7 +148,7 @@ function Students() {
   //////////////////////////////////////////////////////////////////////////////////////////////////
   const fullStackStudents = () => {
     const newStudentsArray = students.filter((student) => {
-      return student.course === 'fullStack';
+      return student.course === 'FullStack';
     });
     SetFilteredStudents(newStudentsArray);
   };
@@ -66,16 +167,16 @@ function Students() {
     SetFilteredStudents(newStudentsArray);
   };
   //////////////////////////////////////////////////////////////////////////////////////////////////////
-  const salesforceStudents = () => {
+  const AutomationStudents = () => {
     const newStudentsArray = students.filter((student) => {
-      return student.course === 'salesforce';
+      return student.course === 'Automation';
     });
     SetFilteredStudents(newStudentsArray);
   };
   /////////////////////////////////////////////////////////////////////////////////////////////////////
   const devnetStudents = () => {
     const newStudentsArray = students.filter((student) => {
-      return student.course === 'devnet';
+      return student.course === 'Devnet';
     });
     SetFilteredStudents(newStudentsArray);
   };
@@ -105,102 +206,19 @@ function Students() {
         <Button type='primary' ghost onClick={socStudents}>
           SOC
         </Button>
-        <Button type='primary' ghost onClick={salesforceStudents}>
-          SalesForce
+        <Button type='primary' ghost onClick={AutomationStudents}>
+        Automation
         </Button>
         <Button type='primary' ghost onClick={devnetStudents}>
           Devnet
         </Button>
       </div>
 
-      <Button type='primary' onClick={showModal} style={{ marginTop: '10px' }}>
+      <Button type='primary' onClick={showModal} style={{ marginLeft: "46%",marginTop: "17px",background: "#f07575",border: "solid 2px #f0757" }}>
         אוסף אותי
       </Button>
 
-      {/* {filteredStudents.map((student)=>{
-          return(
-            <>
-            <img src={student.img}/>
-            <h1>{student.name}</h1>
-            <h2>{student.course}</h2>
-            <h3>{student.workAt}</h3>
-            </>
-          )
-        })} */}
-      <section class='info'>
-        <img src='https://codetheweb.blog/assets/img/icon2.png' />
-        <h1>
-          Learn HTML &mdash;{' '}
-          <a href='https://codetheweb.blog/' target='_blank'>
-            Code The Web
-          </a>
-        </h1>
-      </section>
-      <section class='studentCards-wrapper'>
-        <div class='studentCard-grid-space'>
-          <div class='num'>01</div>
-          <a
-            class='studentCard'
-            href='https://codetheweb.blog/2017/10/06/html-syntax/'
-            style={{
-              backgroundImage:
-                'url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)',
-            }}
-          >
-            <div>
-              <h1>HTML Syntax</h1>
-              <p>
-                The syntax of a language is how it works. How to actually write
-                it. Learn HTML syntax…
-              </p>
-              <div class='date'>6 Oct 2017</div>
-              <div class='tags'>
-                <div class='tag'>HTML</div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class='studentCard-grid-space'>
-          <div class='num'>02</div>
-          <a
-            class='studentCard'
-            href='https://codetheweb.blog/2017/10/09/basic-types-of-html-tags/'
-            style={{
-              backgroundImage:
-                'url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/basic-types-of-html-tags/cover.jpg)',
-            }}
-          >
-            <div>
-              <h1>Basic types of HTML tags</h1>
-              <p>Learn about some of the most common HTML tags…</p>
-              <div class='date'>9 Oct 2017</div>
-              <div class='tags'>
-                <div class='tag'>HTML</div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class='studentCard-grid-space'>
-          <div class='num'>03</div>
-          <a
-            class='studentCard'
-            href='https://codetheweb.blog/2017/10/14/links-images-about-file-paths/'
-            style={{
-              backgroundImage:
-                'url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/links-images-about-file-paths/cover.jpg)',
-            }}
-          >
-            <div>
-              <h1>Links, images and about file paths</h1>
-              <p>Learn how to use links and images along with file paths…</p>
-              <div class='date'>14 Oct 2017</div>
-              <div class='tags'>
-                <div class='tag'>HTML</div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </section>
+      
 
       <Modal
         title=' באפשורתך לשתף מידע אודות עצמך'
@@ -218,6 +236,27 @@ function Students() {
           <textarea placeholder='תיאור' />
         </div>
       </Modal>
+      {filteredStudents.map((student)=>{
+          return (
+            <div className="student-container">
+                <div className="studentDetails">
+                <h1> {student.name} </h1>
+                <h3>קורס : {student.course}</h3>
+                <h3>עובד ב : {student.workAt}</h3>
+                <h2>{student.desciption}</h2>
+                </div>
+             
+           
+                <div className="studentImage">
+                <img src={student.img}/>
+                </div>
+           
+                </div>
+
+          
+          )
+
+      })}
     </div>
   );
 }
