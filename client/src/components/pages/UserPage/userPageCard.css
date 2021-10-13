@@ -1,3 +1,7 @@
+.ant-card-body *{
+    font-size: 20px;
+    font-family: "Varela Round", sans-serif;
+}
 .cardMainStudent {
   display: flex;
   justify-content: space-around;
@@ -5,6 +9,8 @@
   text-align: center;
   padding: 1px;
   margin-top: 20px;
+  background-color: #87b4bb;
+ 
 }
 .cardMain div {
   margin: 5px;
@@ -46,8 +52,42 @@
     flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
-    padding: 1px;
-    margin-top: 20px;
+    width: 60%;
+}
+.imgUser{
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+
+}
+.ant-card-body>.ant-card-meta-title{
+    font-size: 20px !important;
+}
+div .ant-card-meta .descriptionUser{
+    font-size: xx-large !important;
+
+}
+@media only screen and (max-width: 750px) {
+    .cardMainStudent {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 1px;
+        margin-top: 20px;
+       
+      }
+      .cardMainStudent>.quizMain{
+        width: 70%;
+        height: 280px !important;
+        border: 2px solid rgb(177, 174, 174);
+        box-shadow: 4px 5px 4px white;
+        height: 250px;
+        margin-top: 8%;
+    }
+
   }
   .cardMainStudent > .quizMain {
     width: 70%;
