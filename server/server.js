@@ -19,6 +19,7 @@ const adminRoute = require('./Route/adminRoute');
 const loginRoute = require('./Route/loginRoute');
 const educationalMaterialRoute = require('./Route/educationalMaterialRoute');
 const CoursesRoute = require('./Route/coursesRoute');
+const graduateRoute = require('./Route/graduateRoute');
 
 app.use('/api/user', userRoute);
 app.use('/api/post', postRoute);
@@ -27,6 +28,7 @@ app.use('/api/userAuth', loginRoute);
 app.use('/api/educationalMaterialRoute', educationalMaterialRoute);
 app.use('/api/admin', adminRoute);
 app.use('/api/Courses', CoursesRoute);
+app.use('/api/graduates', graduateRoute);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
