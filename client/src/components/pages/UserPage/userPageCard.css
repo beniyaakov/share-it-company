@@ -60,7 +60,7 @@
     height: 180px;
     border-top-left-radius: 10px !important;
     border-top-right-radius: 10px !important;
-
+    
 }
 .ant-card-body>.ant-card-meta-title{
     font-size: 20px !important;
@@ -98,4 +98,9 @@ div .ant-card-meta .descriptionUser{
     height: 250px;
     margin-top: 8%;
   }
+}
+
+
+.userCard{
+  border-radius: 10px !important; 
 }

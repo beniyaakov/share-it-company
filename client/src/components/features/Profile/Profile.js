@@ -37,21 +37,21 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
+      <div className="greeting-profile-container">
+        <Avatar size={35} icon={<UserOutlined />} />
+      </div>
       <div>
-        <div className="greeting-profile-container">
-          <Avatar size={35} icon={<UserOutlined />} />
-        </div>
-        <div>
-          <div className="profile-logout-container">
-            <div>
-              <h3>hello:</h3>
-            </div>
+        <div className="profile-logout-container">
+          <div>
+            <h3>hello:</h3>
+          </div>
+          <div className="profile-logout-container-btn">
+            {" "}
             <ExportOutlined
               onClick={logoutAdmin}
               className="icons"
               style={{ fontSize: "18px" }}
             />
-
             <Dropdown
               overlay={menu}
               onVisibleChange={handleVisibleChange}

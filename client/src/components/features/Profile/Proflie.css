@@ -1,17 +1,21 @@
-
 .profile-container {
-    width: 200px;
-    border:5px solid green;
-    display: flex;
-    flex-direction: row;
-  
-  }
-.greeting-profile-container{
-    border:5px solid pink;
-    
-}
-.profile-logout-container{
-    border:5px solid black;  
-    display: flex; 
+  width: 200px;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: row;
 }
 
+.greeting-profile-container {
+  border: 1px solid pink;
+}
+
+.profile-logout-container {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+.profile-logout-container-btn {
+  display: flex;
+  justify-content: space-between;
+}

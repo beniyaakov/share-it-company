@@ -22,7 +22,7 @@ const UserPage = () => {
                     {userPageData.map((item) => {
                         return <Link to={item.link}> <div className="userCard"> <Card key={item.id}
                             hoverable
-                            style={{ width: 320, margin: 10,borderRadius:10 }}
+                            style={{ width: 320 , margin: 10,borderRadius:10 }}
                             cover={<img alt="example" className="imgUser" src={item.img} />
                             }
                         >
