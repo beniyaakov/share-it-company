@@ -58,17 +58,16 @@ const AppRouter = () => {
   return (
     <div>
       <Switch>
-        {/* <ProtectedRoute path="/" component={}/> */}
         <Route exact path='/' component={Home} />
-        <Route path='/StudyContent' component={StudyContent} />
-        <Route path='/Courses' component={Courses} />
-        <Route path='/Instructors' component={Instructors} />
-        <Route path='/Students' component={Students} />
-        <Route path='/Games' component={Games} />
-        <Route path='/UserPage' component={UserPage} />
-        <Route path='/icon' component={Profile} />
+        <ProtectedRoute path='/StudyContent' component={StudyContent} />
+        <ProtectedRoute path='/Courses' component={Courses} />
+        <ProtectedRoute path='/Instructors' component={Instructors} />
+        <ProtectedRoute path='/Students' component={Students} />
+        <ProtectedRoute path='/Games' component={Games} />
+        <ProtectedRoute path='/UserPage' component={UserPage} />
+        <ProtectedRoute path='/icon' component={Profile} />
         <Route path='/login' component={Login} />
-        <Route path='/logout' component={logout} />
+        <ProtectedRoute path='/logout' component={logout} />
         <Route path='/Registration' component={Registration} />
       </Switch>
     </div>
