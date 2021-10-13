@@ -1,0 +1,25 @@
+
+li {
+    text-align: right;
+    font-family: "Varela Round", sans-serif;
+  }
+  ._access-menu.right {
+    width: 10vw;
+    height: 360px !important;
+    background: #f8f7f5;
+    font-family: "Varela Round", sans-serif;
+  }
+  ._access-menu ul li {
+    color: black !important;
+    margin: 1px !important;
+    padding: 4px !important;
+    
+
+  }
+  
+  i._access-icon {
+    background-color: white !important;
+    color: black !important;
+    width: 65px;
+    height: 45px;
+  }
