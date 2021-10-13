@@ -23,12 +23,11 @@ const data = [{
 const SliderNews = () => {
     // const [data, setData] = useState([]);
     // const getNews = () => {
-    //     fetch("https://newsapi.org/v2/top-headlines?country=il&category=technology&apiKey=b3637dca5e644f068ec9b6bc7375e81b")
+    //     fetch("https://newsapi.org/v2/top-headlines?country=il&category=technology&apiKey=112178c7335743639fee2e8c081cce20")
     //         .then(res => res.json())
     //         .then((res) => setData(res?.articles))
     //         .catch(err => console.log(err))
     // }
-    // getNews();
     // useEffect(() => {
     //     getNews()
     // }, []);
