@@ -44,9 +44,11 @@ const AppRouter = () => {
         textToSpeech: "טקסט לדיבור ",
         speechToText: "דיבור לטקסט ",
       };
+      
       var options = { labels: labels };
       options.textToSpeechLang = "he";
       options.speechToTextLang = "he";
+    
   const { userClearLocalStorage } = useContext(AuthContext);
 
   if (userClearLocalStorage) {
