@@ -79,7 +79,7 @@ function Instructors() {
             </section>
             <section class='studentCards-wrapper'>
               <div class='studentCard-grid-space'>
-                <div class='num'>{item.id}</div>
+                {/* <div class='num'>{item.id}</div> */}
                 <a
                   class='studentCard'
                   href='https://codetheweb.blog/2017/10/06/html-syntax/'
