@@ -106,8 +106,8 @@ function Students() {
         </Button>
       </div>
 
-      <Button type='primary' onClick={showModal} onOk={()=>{postStudents(name,course,workAt,img,description)}} style={{ marginLeft: "46%",marginTop: "17px",background: "#f07575",border: "solid 2px #f0757" }}>
-        אוסף אותי
+      <Button type='primary' onClick={showModal}  style={{ marginLeft: "46%",marginTop: "17px",background: "#f07575",border: "solid 2px #f0757" }}>
+        הוסף אותי
       </Button>
 
       
@@ -115,7 +115,7 @@ function Students() {
       <Modal
         title=' באפשורתך לשתף מידע אודות עצמך'
         visible={isModalVisible}
-        onOk={handleOk}
+        onOk={()=>{postStudents(name,course,workAt,img,description)}}
         onCancel={handleCancel}
         okText='הוסף'
         cancelText='צא'
@@ -145,6 +145,7 @@ function Students() {
                 </div>
            
                 </div>
+                <hr></hr>
                 </>
 
           
