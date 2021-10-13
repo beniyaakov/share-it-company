@@ -7,12 +7,7 @@ import { cardsData } from './StudentContectData';
 
 const { Meta } = Card;
 
-const studyContentData = [
-  { title: "dsfd", subTitle: "dfd", description: "dfdf", img: "" },
-  { title: "dfd", subTitle: "dfd", description: "dfdfd", img: "" },
-  { title: "dfd", subTitle: "dff", description: "dfdf", img: "" },
-  { title: "dfdf", subTitle: "dfdf", description: "dfdff", img: "" },
-]
+
 
 function StudyContent() {
   const [isModalVisible, setIsModalVisible] = useState(false);
