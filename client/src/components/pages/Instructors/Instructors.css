@@ -1,17 +1,17 @@
-.modal{
-    display: flex;
-    flex-direction: column;
+.modal {
+  display: flex;
+  flex-direction: column;
 }
 
-.modal input{
-    width: 150px;
-    margin-top: 10px;
-    margin-left: 321px;
+.modal input {
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 321px;
 }
 
-.modal textarea{
-    margin-top: 20px;
-    height: 200px;
+.modal textarea {
+  margin-top: 20px;
+  height: 200px;
 }
 .post-module .thumbnail img {
   display: block;
@@ -36,13 +36,13 @@
   padding: 4rem;
   margin: 0 auto;
   width: max-content; */
-
-  
 }
-.instructorsDiv{
-    display: flex;
+.instructorsDiv {
+  display: flex;
   flex-wrap: wrap;
-  background-color: #faad1461;
+  flex-direction: column;
+  background-color: rgb(233, 224, 224);
+  width: 100%;
 }
 
 .studentCard {
@@ -64,27 +64,30 @@
   align-items: flex-end;
   background-size: cover;
   background-position: center;
-  background-color: white;
+  background-color: rgb(102, 155, 148);
   transition: all, var(--transition-time);
   position: relative;
   overflow: hidden;
   text-decoration: none;
+  width: 1200px;
+  height: 300px;
+}
+
+.title {
+  margin-bottom: auto;
+  width: 100%;
+}
+
+.descrip {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-self: baseline;
+  text-align: center;
 }
 
 .studentCard:hover {
   transform: rotate(0);
-}
-
-.studentCard h1 {
-  margin: 0;
-  font-size: 1.5em;
-  line-height: 1.2em;
-}
-
-.studentCard p {
-  font-size: 0.75em;
-  margin-top: 0.5em;
-  line-height: 2em;
 }
 
 .studentCard .tags {
@@ -118,7 +121,7 @@
 
 .studentCard:before,
 .studentCard:after {
-  content: '';
+  content: "";
   transform: scale(0);
   transform-origin: top left;
   border-radius: 50%;
@@ -173,10 +176,9 @@
   font-size: 1em;
   font-weight: normal;
 }
-.InstructorsMain{
+.InstructorsMain {
   display: flex;
   flex-wrap: wrap;
-  
 }
 
 /* MEDIA QUERIES */
@@ -218,9 +220,7 @@
   }
 }
 
-
-
-  /* .post-module {
+/* .post-module {
     position: relative;
     z-index: 1;
     display: block;
