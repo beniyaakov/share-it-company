@@ -14,10 +14,10 @@ const Profile = () => {
   const [state, setState] = useState([]);
 
   const logoutAdmin = () => {
-    logout()
+    logout();
     return <Redirect to="/login" />;
   };
-  
+
   const handleMenuClick = (e) => {
     if (e.key === "3") {
       setState({ visible: false });
@@ -36,30 +36,64 @@ const Profile = () => {
   );
 
   return (
-    <div>
-      <div className="profile">
-        <Avatar size={35} icon={<UserOutlined />} />
-        <p>hello:</p>
-        <ExportOutlined onClick={logoutAdmin} />
+    <div className="profile-container">
+      <div>
+        <div className="greeting-profile-container">
+          <Avatar size={35} icon={<UserOutlined />} />
+        </div>
+        <div>
+          <div className="profile-logout-container">
+            <div>
+              <h3>hello:</h3>
+            </div>
+            <ExportOutlined
+              onClick={logoutAdmin}
+              className="icons"
+              style={{ fontSize: "18px" }}
+            />
 
-        
-          <Dropdown
-            overlay={menu}
-            onVisibleChange={handleVisibleChange}
-            visible={state.visible}
-            className="icons"
-          >
-            <a
-              className="ant-dropdown-link"
-              onClick={(e) => e.preventDefault()}
+            <Dropdown
+              overlay={menu}
+              onVisibleChange={handleVisibleChange}
+              visible={state.visible}
+              className="drop"
             >
-              <DownOutlined />
-            </a>
-          </Dropdown>
-        
-
+              <a
+                className="ant-dropdown-link"
+                onClick={(e) => e.preventDefault()}
+                style={{ fontSize: "18px", color: "red" }}
+              >
+                <DownOutlined />
+              </a>
+            </Dropdown>
+          </div>
+        </div>
       </div>
     </div>
+
+    // <div className="profile">
+    //   <Avatar size={35} icon={<UserOutlined />} />
+
+    //   <div className="icons2">
+
+    //   <h3>hello:</h3>
+    //   <div className="icon3">
+    //     <ExportOutlined onClick={logoutAdmin} className="icons" />
+
+    //     <Dropdown
+    //       overlay={menu}
+    //       onVisibleChange={handleVisibleChange}
+    //       visible={state.visible}
+    //       className="drop"
+    //     >
+    //       <a className="ant-dropdown-link" onClick={(e) => e.preventDefault()}>
+    //         <DownOutlined />
+    //       </a>
+    //     </Dropdown>
+    //     </div>
+    //   </div>
+
+    // </div>
   );
 };
 

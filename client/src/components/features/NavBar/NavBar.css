@@ -1,6 +1,6 @@
 .navBarMain{
     width: 100%;
-    background: rgb(246,246,246);
+    background: white;
     display: flex;
     justify-content: space-between;
     margin: -2px;
