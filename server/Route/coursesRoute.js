@@ -4,7 +4,7 @@ const {
   editCourse,
   getAllCourses,
   postCourse,
-} = require('../Controller/courses');
+} = require('../Controller/coursesController');
 
 route.get('/all', getAllCourses);
 route.post('/addCourse', postCourse);

@@ -1,4 +1,4 @@
-const CoursesModel = require('../Model/courses');
+const CoursesModel = require('../Model/coursesModel');
 const Joi = require('joi');
 
 const validateCourse = (bodyData) => {

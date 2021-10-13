@@ -1,11 +1,10 @@
-const Usermodel = require('../Model/userModel')
-
+const userModel = require('../Model/userModel') 
 
 const UpdateUser =  (req, res) => {
     const field = {}
     field[req.body.field] = req.body.newValue
     try {
-        Usermodel.findByIdAndUpdate(req.body.id, { $set: field }, { new: true }, (err, result) => {
+        userModel.findByIdAndUpdate(req.body.id, { $set: field }, { new: true }, (err, result) => {
             if (err) throw err
             res.status(200).json({ message: "success", data: result })
         })
@@ -16,7 +15,7 @@ const UpdateUser =  (req, res) => {
 }
 const deleteUser =  (req, res) => {
     try {
-        Usermodel.findByIdAndDelete(req.body.id, { new: true }, (err, result) => {
+        userModel.findByIdAndDelete(req.body.id, { new: true }, (err, result) => {
             if (err) throw err
             res.status(200).json({ message: "success", data: result })
         })
@@ -27,7 +26,7 @@ const deleteUser =  (req, res) => {
 }
 const getAllUsers =  (req, res) => {
     try {
-        Usermodel.find({}, (err, result) => {
+        userModel.find({}, (err, result) => {
             if (err) throw err
             res.status(200).json({ message: "success", data: result })
         })
@@ -37,7 +36,7 @@ const getAllUsers =  (req, res) => {
 }
 const getUserById =  (req, res) => {
     try {
-        Usermodel.findById(req.params.id, (err, result) => {
+        userModel.findById(req.params.id, (err, result) => {
             if (err) throw err
             res.status(200).json({ message: "success", data: result })
         })
@@ -45,9 +44,30 @@ const getUserById =  (req, res) => {
         res.status(400).json({ message: "failed", error: error.message })
     }
 }
+
+const userFavorites = async(req, res) => {
+    console.log();
+    try {
+        let post = await 1
+        const user = await userModel.findById(req.body.userId);
+        console.log(user); 
+        userModel.findById({_id:req.params.id, posts:{$elemMatch:{_id:req.body.id}}}, async (error, result)=>{
+            if(error) throw error;
+            post = await result.posts.filter(obj=> obj.id === req.body.id );
+            console.log(post);
+            user.favorites.push(post);
+            user.save();
+            res.status(200).json({ message: "success", data: result })
+        })        
+    } catch (error) {
+        res.status(400).json({ message: "failed", error: error.message })
+    }
+}
+
 module.exports = {
     UpdateUser,
     deleteUser,
     getAllUsers,
-    getUserById
+    getUserById,
+    userFavorites
 }
