@@ -1,7 +1,7 @@
 import React from 'react'
 import './footer.css'
 import {FacebookOutlined,MailOutlined,InstagramOutlined } from '@ant-design/icons'
-import { Link } from 'react-router-dom'
+
 
 const Footer = () => {
     return (
