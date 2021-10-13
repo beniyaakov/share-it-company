@@ -38,6 +38,7 @@
   flex-wrap: wrap;
   text-align: center;
   width: 70%;}
+  
 .cardMainStudent>.quizMain{
     border: 2px solid rgb(177, 174, 174);
     box-shadow: 4px 5px 4px white;
