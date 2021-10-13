@@ -9,3 +9,16 @@
 .navBarMain img{
   
 }
+
+ .porum{
+    padding: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #87b4bb;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+} 
