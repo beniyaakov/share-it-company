@@ -52,14 +52,3 @@ const SliderNews = () => {
 export default SliderNews;
 
 
-
-{/* <Carousel autoplay>
-{data?.map((slide) => (
-    <div>
-        <h1>חדשות היום</h1>
-        <h1 className="headerSlider">{slide?.title}</h1>
-        <img src={slide?.urlToImage} id="img-slider" alt="slider-img" />
-        <p className="descSlider">{slide?.description}</p>
-    </div>
-))}
-</Carousel> */}

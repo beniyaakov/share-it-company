@@ -1,3 +1,7 @@
+.ant-card-body *{
+    font-size: 20px;
+    font-family: "Varela Round", sans-serif;
+}
 .cardMainStudent {
   display: flex;
   justify-content: space-around;
@@ -5,6 +9,7 @@
   text-align: center;
   padding: 1px;
   margin-top: 20px;
+  background-color: #87b4bb;
  
 }
 .cardMain div{
@@ -31,6 +36,20 @@
     flex-wrap: wrap;
     text-align: center;
     width: 60%;
+}
+.imgUser{
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+
+}
+.ant-card-body>.ant-card-meta-title{
+    font-size: 20px !important;
+}
+div .ant-card-meta .descriptionUser{
+    font-size: xx-large !important;
+
 }
 @media only screen and (max-width: 750px) {
     .cardMainStudent {
