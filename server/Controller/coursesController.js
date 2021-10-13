@@ -1,12 +1,12 @@
-const CoursesModel = require('../Model/coursesModel');
-const Joi = require('joi');
+const CoursesModel = require("../Model/coursesModel");
+const Joi = require("joi");
 
 const validateCourse = (bodyData) => {
   let joiSchema = Joi.object({
     name: Joi.string().min(3).max(100).required(),
     url: Joi.string().min(3).max(600).required(),
     description: Joi.string().min(3).max(5100).required(),
-    from: Joi.string().min(3).max(100).required(),
+    img: Joi.string().min(3).max(1000).required(),
   });
   return joiSchema.validate(bodyData);
 };
@@ -17,11 +17,11 @@ const getAllCourses = async (req, res) => {
     if (!courses) {
       return res
         .status(400)
-        .json({ message: 'something went wrong getAllCourses' });
+        .json({ message: "something went wrong getAllCourses" });
     }
     res.send(courses);
   } catch (error) {
-    res.status(400).json({ message: 'failed', error: error.message });
+    res.status(400).json({ message: "failed", error: error.message });
   }
 };
 
@@ -35,7 +35,7 @@ const postCourse = async (req, res) => {
     await course.save();
     res.send(course);
   } catch (error) {
-    res.status(400).json({ message: 'failed', error: error.message });
+    res.status(400).json({ message: "failed", error: error.message });
   }
 };
 
@@ -44,7 +44,7 @@ const deleteCourse = async (req, res) => {
     let data = await CoursesModel.deleteOne({ _id: req.params.id });
     res.send(data);
   } catch (error) {
-    res.status(400).json({ message: 'failed', error: error.message });
+    res.status(400).json({ message: "failed", error: error.message });
   }
 };
 
@@ -59,11 +59,11 @@ const editCourse = (req, res) => {
       req.body,
       (err, result) => {
         if (err) throw err;
-        res.status(200).json({ message: 'success', data: result });
+        res.status(200).json({ message: "success", data: result });
       }
     );
   } catch (error) {
-    res.status(400).json({ message: 'failed', error: error.message });
+    res.status(400).json({ message: "failed", error: error.message });
   }
 };
 module.exports = {
