@@ -19,10 +19,11 @@ const NavBar = () => {
         <div className="navBarMain">
                   {isLogin && <Profile />}
 {!isLogin&& 
-             <Link to='/Login'><Button type="primary" className="button" text="התחברות"></Button> </Link>
+             <Link to='/Login'><Button type="primary" className="button" text="התחברות" ></Button> </Link>
 }
-
+{isLogin&&
         <Link to=""><Button type="primary" className="button" text="פורום" className="porum"  ></Button></Link>
+        }
 <Link to="/userPage">    <img src="logo share it2.png" width="170" height="80px" style={{marginTop:10}} /></Link>
          
         </div>

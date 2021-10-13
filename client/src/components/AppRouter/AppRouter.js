@@ -1,4 +1,5 @@
 import Courses from '../pages/Courses/Courses';
+import { useEffect } from "react";
 import ProtectedRoute from './ProtectedRoute';
 import React, { useContext } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
@@ -13,8 +14,41 @@ import logout from '../Context/AuthContextProvider';
 import UserPage from '../pages/UserPage/UserPage';
 import Registration from '../features/Form/Registration/Registration';
 import Games from '../pages/Games/Games';
+import { Accessibility } from "accessibility/src/main";
+import './accsibility.css'
 
 const AppRouter = () => {
+    useEffect(() => {
+        window.addEventListener(
+          "load",
+          function () {
+            new Accessibility(options);
+          },
+          false
+        );
+      });
+    
+      var labels = {
+        resetTitle: "רענן ",
+        closeTitle: "סגור ",
+        menuTitle: "נגישות ",
+        increaseText: "טקסט גדול ",
+        decreaseText: "טקסט קטן ",
+        increaseTextSpacing: "הגדל את מרווח הטקסט ",
+        decreaseTextSpacing: "הקטן את מרווח הטקסט ",
+        invertColors: "הפוך צבעים ",
+        grayHues: "גוונים אפורים ",
+        underlineLinks: "קישורים תחתונים ",
+        bigCursor: "סמן גדול ",
+        readingGuide: "מדריך קריאה ",
+        textToSpeech: "טקסט לדיבור ",
+        speechToText: "דיבור לטקסט ",
+      };
+      
+      var options = { labels: labels };
+      options.textToSpeechLang = "he";
+      options.speechToTextLang = "he";
+    
   const { userClearLocalStorage } = useContext(AuthContext);
 
   if (userClearLocalStorage) {

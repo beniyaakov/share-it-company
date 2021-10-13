@@ -1,53 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Modal, Button } from 'antd';
 import './Students.css';
+import { getStudents,postStudents } from '../../../Service/Students-Service';
 
-const students = [
-  {
-    name: 'elias admaso',
-    course: 'fullStack',
-    workAt: 'wix',
-    img: 'https://media-exp1.licdn.com/dms/image/C4E03AQHONZLBcUQWlA/profile-displayphoto-shrink_800_800/0/1615321610967?e=1639612800&v=beta&t=UmIZs12v6ENEl5jTTWGFmdmIx848YsFlF1nSXJNUDkk',
-  },
-  {
-    name: 'beni yaakov',
-    course: 'QA',
-    workAt: 'wix',
-    img: 'https://media-exp1.licdn.com/dms/image/C4E03AQFU2v3qRvbdYw/profile-displayphoto-shrink_800_800/0/1617628713358?e=1639612800&v=beta&t=zETemBvRww3Ow68scr-OcnUTu7pC0ejfzsuC0GypmWg',
-  },
-  {
-    name: 'yehuda bayana',
-    course: 'fullStack',
-    workAt: 'wix',
-    img: 'https://media-exp1.licdn.com/dms/image/D4D35AQE-GnBktmSAPA/profile-framedphoto-shrink_400_400/0/1629479100451?e=1634112000&v=beta&t=yglHnlRy67IWgrvcCbs1pbt9QESIqRhTfOAHUKFwJnU',
-  },
-  {
-    name: 'yosef sahalo',
-    course: 'salesforce',
-    workAt: 'wix',
-    img: 'https://media-exp1.licdn.com/dms/image/C4D03AQGrwFn-Q1OuQQ/profile-displayphoto-shrink_800_800/0/1633559772093?e=1639612800&v=beta&t=iDXCU68q_hfow8vqvqmhTQochQO68tEWYU8zT61FXDU',
-  },
-  {
-    name: 'kineret asiyahan',
-    course: 'SOC',
-    workAt: 'wix',
-    img: 'https://media-exp1.licdn.com/dms/image/C4D03AQFxrn7UqoytHQ/profile-displayphoto-shrink_800_800/0/1618231708265?e=1639612800&v=beta&t=LrCe5M434z6QW8JWtgHNOi_j9QikFJ2Z0onXM0DnHKc',
-  },
-  {
-    name: 'itzhak kasie',
-    course: 'devnet',
-    workAt: 'wix',
-    img: 'https://media-exp1.licdn.com/dms/image/C4E35AQEf5zT6-kTYpQ/profile-framedphoto-shrink_800_800/0/1614614634753?e=1634112000&v=beta&t=bOR5ulW8yU8y6EJ69BbVdBWG43201MiryLJ0T6T0peQ',
-  },
-];
 
 function Students() {
+
+  const [students,setStudents] = useState([]);
   const [filteredStudents, SetFilteredStudents] = useState([]);
+
+  useEffect(()=>{
+      getStudents()
+      .then((res) => {
+        setStudents(res);
+      });
+  },[])
+  const [name,setName] = useState("");
+  const [course,setCourse] = useState("");
+  const [workAt,setWorkAt] = useState("");
+  const [img,setImg] = useState("");
+  const [description,setDescription] = useState("");
+
+  const getName = (e)=>{
+    setName(e.target.value)
+  }
+  const getCourse = (e)=>{
+    setCourse(e.target.value)
+  }
+  const getWorkAt = (e)=>{
+    setWorkAt(e.target.value)
+  }
+  const getImg = (e)=>{
+    setImg(e.target.value)
+  }
+  const getDescription = (e)=>{
+    setDescription(e.target.value)
+  }
 
   //////////////////////////////////////////////////////////////////////////////////////////////////
   const fullStackStudents = () => {
     const newStudentsArray = students.filter((student) => {
-      return student.course === 'fullStack';
+      return student.course === 'FullStack';
     });
     SetFilteredStudents(newStudentsArray);
   };
@@ -66,16 +59,16 @@ function Students() {
     SetFilteredStudents(newStudentsArray);
   };
   //////////////////////////////////////////////////////////////////////////////////////////////////////
-  const salesforceStudents = () => {
+  const AutomationStudents = () => {
     const newStudentsArray = students.filter((student) => {
-      return student.course === 'salesforce';
+      return student.course === 'Automation';
     });
     SetFilteredStudents(newStudentsArray);
   };
   /////////////////////////////////////////////////////////////////////////////////////////////////////
   const devnetStudents = () => {
     const newStudentsArray = students.filter((student) => {
-      return student.course === 'devnet';
+      return student.course === 'Devnet';
     });
     SetFilteredStudents(newStudentsArray);
   };
@@ -105,119 +98,60 @@ function Students() {
         <Button type='primary' ghost onClick={socStudents}>
           SOC
         </Button>
-        <Button type='primary' ghost onClick={salesforceStudents}>
-          SalesForce
+        <Button type='primary' ghost onClick={AutomationStudents}>
+        Automation
         </Button>
         <Button type='primary' ghost onClick={devnetStudents}>
           Devnet
         </Button>
       </div>
 
-      <Button type='primary' onClick={showModal} style={{ marginTop: '10px' }}>
-        אוסף אותי
+      <Button type='primary' onClick={showModal}  style={{ marginLeft: "46%",marginTop: "17px",background: "#f07575",border: "solid 2px #f0757" }}>
+        הוסף אותי
       </Button>
 
-      {/* {filteredStudents.map((student)=>{
-          return(
-            <>
-            <img src={student.img}/>
-            <h1>{student.name}</h1>
-            <h2>{student.course}</h2>
-            <h3>{student.workAt}</h3>
-            </>
-          )
-        })} */}
-      <section class='info'>
-        <img src='https://codetheweb.blog/assets/img/icon2.png' />
-        <h1>
-          Learn HTML &mdash;{' '}
-          <a href='https://codetheweb.blog/' target='_blank'>
-            Code The Web
-          </a>
-        </h1>
-      </section>
-      <section class='studentCards-wrapper'>
-        <div class='studentCard-grid-space'>
-          <div class='num'>01</div>
-          <a
-            class='studentCard'
-            href='https://codetheweb.blog/2017/10/06/html-syntax/'
-            style={{
-              backgroundImage:
-                'url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)',
-            }}
-          >
-            <div>
-              <h1>HTML Syntax</h1>
-              <p>
-                The syntax of a language is how it works. How to actually write
-                it. Learn HTML syntax…
-              </p>
-              <div class='date'>6 Oct 2017</div>
-              <div class='tags'>
-                <div class='tag'>HTML</div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class='studentCard-grid-space'>
-          <div class='num'>02</div>
-          <a
-            class='studentCard'
-            href='https://codetheweb.blog/2017/10/09/basic-types-of-html-tags/'
-            style={{
-              backgroundImage:
-                'url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/basic-types-of-html-tags/cover.jpg)',
-            }}
-          >
-            <div>
-              <h1>Basic types of HTML tags</h1>
-              <p>Learn about some of the most common HTML tags…</p>
-              <div class='date'>9 Oct 2017</div>
-              <div class='tags'>
-                <div class='tag'>HTML</div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class='studentCard-grid-space'>
-          <div class='num'>03</div>
-          <a
-            class='studentCard'
-            href='https://codetheweb.blog/2017/10/14/links-images-about-file-paths/'
-            style={{
-              backgroundImage:
-                'url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/links-images-about-file-paths/cover.jpg)',
-            }}
-          >
-            <div>
-              <h1>Links, images and about file paths</h1>
-              <p>Learn how to use links and images along with file paths…</p>
-              <div class='date'>14 Oct 2017</div>
-              <div class='tags'>
-                <div class='tag'>HTML</div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </section>
+      
 
       <Modal
         title=' באפשורתך לשתף מידע אודות עצמך'
         visible={isModalVisible}
-        onOk={handleOk}
+        onOk={()=>{postStudents(name,course,workAt,img,description)}}
         onCancel={handleCancel}
         okText='הוסף'
         cancelText='צא'
       >
         <div className='modal'>
-          <input placeholder='שם הסטודנט' />
-          <input placeholder='קורס' />
-          <input placeholder='מקום עבודה' />
-          <input placeholder='תמונה' />
-          <textarea placeholder='תיאור' />
+          <input placeholder='שם הסטודנט' onChange={getName}/>
+          <input placeholder='קורס' onChange={getCourse}/>
+          <input placeholder='מקום עבודה' onChange={getWorkAt}/>
+          <input placeholder='תמונה' onChange={getImg}/>
+          <textarea placeholder='תיאור' onChange={getDescription}/>
         </div>
       </Modal>
+      {filteredStudents.map((student)=>{
+          return (
+              <>
+            <div className="student-container">
+                <div className="studentDetails">
+                <h1> {student.name} </h1>
+                <h3>קורס : {student.course}</h3>
+                <h3>עובד ב : {student.workAt}</h3>
+                <h2>{student.description}</h2>
+                </div>
+             
+           
+                <div className="studentImage">
+                <img src={student.img}/>
+                </div>
+           
+                </div>
+                <hr></hr>
+                </>
+
+          
+          )
+
+      })}
     </div>
   );
 }
